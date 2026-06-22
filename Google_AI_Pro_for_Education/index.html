@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google AI Pro for Education | ยกระดับการเรียนการสอนด้วย Gemini AI</title>
+  <meta name="description" content="ปลดล็อกพลังการศึกษาด้วย Google AI Pro for Education และ Gemini AI ผู้ช่วยอัจฉริยะใน Google Workspace ปลอดภัย เป็นส่วนตัว ไร้กังวลเรื่องการละเมิดลิขสิทธิ์">
+  <link rel="icon" type="image/png" href="./Image/Gemini_Workspace.png">
+  
+  <!-- Fonts: Kanit and Inter from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            googleBlue: '#1A73E8',
+            geminiIndigo: '#4F46E5',
+            geminiPurple: '#9333EA',
+            cyanAccent: '#06B6D4',
+            lightLavender: '#EEF2FF',
+            darkSlate: '#0F172A',
+            slateGray: '#475569',
+          },
+          fontFamily: {
+            sans: ['Kanit', 'Inter', 'sans-serif'],
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'sparkle': 'sparkle 2s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            sparkle: {
+              '0%, 100%': { opacity: 0.3, transform: 'scale(1)' },
+              '50%': { opacity: 1, transform: 'scale(1.1)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Style overrides for custom classes -->
+  <style>
+    /* Glow text effect */
+    .text-gradient {
+      background: linear-gradient(135deg, #1A73E8 0%, #4F46E5 50%, #9333EA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Active scroll navigation indicator line */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #4F46E5;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    /* Scroll reveal transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slateGray font-sans overflow-x-hidden antialiased">
+
+  <!-- ==================== SECTION 1: STICKY NAVIGATION BAR ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center group">
+          <div class="flex items-center">
+            <div class="flex flex-col items-start leading-none mr-1.5">
+              <span class="text-[9px] font-bold text-slate-800 tracking-widest uppercase">THE</span>
+              <span class="text-3xl font-extrabold text-emerald-700 leading-none">S</span>
+            </div>
+            <div class="flex flex-col text-[8px] font-bold text-emerald-700 leading-[1.1] uppercase tracking-widest pl-1 border-l border-emerald-300">
+              <span>C</span>
+              <span>U</span>
+              <span>R</span>
+              <span>V</span>
+              <span>E</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Contact Call -->
+        <div class="flex items-center space-x-2 text-slate-800 font-semibold text-sm">
+          <!-- Telephone Handset Icon -->
+          <svg class="w-4 h-4 text-slate-800" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.27 1.11z"/>
+          </svg>
+          <span>Call 084-245-5451</span>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SECTION 2: HERO SECTION ==================== -->
+  <section class="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-slate-50">
+    <!-- Background dynamic glow shapes -->
+    <div class="absolute top-1/4 left-0 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-googleBlue/10 to-indigo-500/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 right-0 translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-l from-geminiPurple/10 to-cyanAccent/10 blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      
+      <!-- Announcement Banner -->
+      <div class="max-w-3xl mx-auto mb-10 bg-blue-50/50 border border-blue-100/50 rounded-3xl p-5 md:py-3.5 md:px-7 flex items-center justify-between shadow-sm">
+        <div class="flex-1 text-left pr-4">
+          <span class="inline-flex items-center text-sm font-bold text-slate-800">
+            ขอแนะนำ Workspace Intelligence
+          </span>
+          <p class="text-xs md:text-sm text-slate-600 mt-0.5">
+            พบกับ AI ทรงประสิทธิภาพที่ปรับเปลี่ยนในแบบของคุณซึ่งอิงตามบริบทของงานของคุณ 
+            <a href="#" class="text-blue-600 font-semibold hover:underline ml-1">ดูข้อมูลเพิ่มเติม &gt;</a>
+          </p>
+        </div>
+        <!-- Sparkle Icon on the right -->
+        <div class="ml-2 shrink-0 text-blue-500 relative flex items-center justify-center">
+          <!-- Big Sparkle SVG -->
+          <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2a1 1 0 0 1 .897.553l2.846 5.69 5.69 2.846a1 1 0 0 1 0 1.782l-5.69 2.846-2.846 5.69a1 1 0 0 1-1.782 0l-2.846-5.69-5.69-2.846a1 1 0 0 1 0-1.782l5.69-2.846 2.846-5.69A1 1 0 0 1 12 2z" />
+          </svg>
+          <!-- Small Orange/Red Sparkle SVG -->
+          <svg class="w-4 h-4 text-orange-400 absolute -bottom-1 -right-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2a1 1 0 0 1 .897.553l2.846 5.69 5.69 2.846a1 1 0 0 1 0 1.782l-5.69 2.846-2.846 5.69a1 1 0 0 1-1.782 0l-2.846-5.69-5.69-2.846a1 1 0 0 1 0-1.782l5.69-2.846 2.846-5.69A1 1 0 0 1 12 2z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column (Content) -->
+        <div class="lg:col-span-6 space-y-6 text-left">
+          
+          <!-- Headline H1 -->
+          <h1 class="text-4xl sm:text-5xl lg:text-[2.75rem] font-bold text-darkSlate leading-tight tracking-tight">
+            ทำงานได้มีประสิทธิภาพ<br>ยิ่งขึ้น
+          </h1>
+          
+          <!-- Subheadline -->
+          <p class="text-base sm:text-lg text-slateGray leading-relaxed max-w-xl">
+            มาร่วมกับอีกหลากหลายล้านธุรกิจที่ใช้ Gmail, ปฏิทิน, ไดรฟ์, Meet และอีกมากมายในเวอร์ชันพรีเมียม มุ่งเน้นที่การได้ผลลัพธ์แทนการค้นหาข้อมูลด้วย AI ที่มีประโยชน์และได้รับการปรับเปลี่ยนในแบบของคุณ
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="pt-2 text-left">
+            <a href="#contact" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+              เริ่มต้นทดลองใช้ฟรี
+            </a>
+          </div>
+          
+        </div>
+        
+        <!-- Right Column (Workspace Mockup Overlay) -->
+        <div class="lg:col-span-6 relative flex justify-center">
+          
+          <!-- Outer glowing circle -->
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-500 to-indigo-500 opacity-20 blur-xl animate-float"></div>
+          
+          <!-- Mockup Container -->
+          <div class="relative w-full max-w-[500px] aspect-[4/3] rounded-3xl shadow-2xl bg-slate-100 border border-slate-200/50">
+            <!-- Main image of woman working -->
+            <img class="w-full h-full object-cover rounded-3xl" src="./Image/workspace_woman.png" alt="Workspace AI">
+            
+            <!-- Float 1: Google Docs Card (Left side overlap) -->
+            <div class="absolute -left-12 top-1/4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-100 p-3 flex items-center space-x-3 animate-float" style="animation-delay: 1s;">
+              <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                <!-- Google Doc SVG Icon -->
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+              </div>
+              <div class="flex flex-col text-left">
+                <div class="flex items-center space-x-1 mb-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                </div>
+                <div class="bg-indigo-50 border border-indigo-100 text-indigo-700 text-[10px] font-semibold px-3 py-1 rounded-full flex items-center space-x-1.5">
+                  <svg class="w-3 h-3 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                  </svg>
+                  <span>Help me write</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Float 2: Face Avatars Stack (Top right) -->
+            <div class="absolute right-8 -top-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg border border-slate-100 flex items-center -space-x-2 animate-float" style="animation-delay: 2s;">
+              <img class="w-7 h-7 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" alt="User 1">
+              <img class="w-7 h-7 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100" alt="User 2">
+              <img class="w-7 h-7 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100&h=100" alt="User 3">
+            </div>
+
+            <!-- Float 3: Comments Box Card (Right side overlap) -->
+            <div class="absolute -right-10 bottom-16 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-100 p-4 w-[240px] text-left animate-float" style="animation-delay: 0.5s;">
+              <!-- Comment 1 -->
+              <div class="flex items-start space-x-2.5">
+                <img class="w-6 h-6 rounded-full object-cover shrink-0" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=80&h=80" alt="Susan Johnson">
+                <div class="flex-1 min-w-0">
+                  <span class="block text-xs font-bold text-slate-800">Susan Johnson</span>
+                  <div class="mt-1 space-y-1">
+                    <div class="h-1.5 bg-slate-200 rounded w-full"></div>
+                    <div class="h-1.5 bg-slate-200 rounded w-3/4"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Replies Separator -->
+              <div class="my-2.5 flex items-center justify-between border-t border-slate-100 pt-2 text-[10px] text-slate-400">
+                <span>4 replies</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              </div>
+              
+              <!-- Comment 2 -->
+              <div class="flex items-start space-x-2.5">
+                <img class="w-6 h-6 rounded-full object-cover shrink-0" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=80&h=80" alt="Jason Coleman">
+                <div class="flex-1 min-w-0">
+                  <span class="block text-xs font-bold text-slate-800">Jason Coleman</span>
+                  <div class="mt-1 space-y-1">
+                    <div class="h-1.5 bg-slate-200 rounded w-5/6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Float 4: Play Button Overlay (Center bottom) -->
+            <div class="absolute -bottom-6 left-1/3 transform -translate-x-1/2 bg-white text-blue-600 rounded-full p-3 shadow-lg hover:shadow-xl border border-slate-100 cursor-pointer hover:scale-110 transition-transform duration-300 z-10" onclick="openVideoModal()">
+              <!-- Blue Play Icon -->
+              <svg class="w-6 h-6 fill-current text-blue-600" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: FEATURE SHOWCASE GRID ==================== -->
+  <section id="features" class="pt-10 pb-12 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Sub-Navigation Pill Bar -->
+      <div class="max-w-4xl mx-auto mb-10 mt-1 px-4">
+        <div class="bg-white rounded-full shadow-lg border border-slate-100 py-3 px-6 md:px-8 flex items-center justify-center space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-12 text-[11px] sm:text-xs md:text-sm text-slate-600 font-medium overflow-x-auto scrollbar-none">
+          <a href="#features" class="hover:text-blue-600 transition-all py-1 shrink-0">ดูการใช้งานจริง</a>
+          <a href="#security" class="hover:text-blue-600 transition-all py-1 shrink-0">ความเป็นส่วนตัวและความปลอดภัย</a>
+          <a href="#contact" class="hover:text-blue-600 transition-all py-1 shrink-0">ราคา</a>
+          <a href="#benefits" class="hover:text-blue-600 transition-all py-1 shrink-0">แหล่งข้อมูล</a>
+          <a href="#contact" class="hover:text-blue-600 transition-all py-1 shrink-0">คำถามที่พบบ่อย</a>
+        </div>
+      </div>
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-4xl mx-auto mb-8">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-darkSlate mb-3">
+          <span class="text-blue-600">Gemini</span> เป็นผู้ช่วย AI ของคุณใน Google Workspace for Education
+        </h2>
+        <div class="w-16 h-1.5 bg-gradient-to-r from-googleBlue to-geminiPurple mx-auto rounded-full mb-4"></div>
+        <p class="text-base sm:text-lg text-slateGray leading-relaxed">
+          Google AI Pro for Education ให้สิทธิ์เพิ่มเติมในการเข้าถึงโมเดลและฟีเจอร์ AI ระดับพรีเมียมใน Gemini for Education และ NotebookLM รวมถึงสิทธิ์เข้าถึง Gemini ใน Workspace อย่างเต็มรูปแบบ
+        </p>
+      </div>
+
+      <!-- Tab Buttons Navigation Bar -->
+      <div class="border-b border-slate-200 mb-2 overflow-x-auto scrollbar-none">
+        <div class="flex space-x-6 md:space-x-12 min-w-max md:justify-center pb-4 px-2">
+          
+          <!-- Tab 1 -->
+          <button onclick="switchFeatureTab(1)" id="feat-tab-1" class="feat-tab-btn flex flex-col items-center space-y-2 border-b-2 border-blue-600 pb-3 text-blue-600 focus:outline-none transition-all duration-300">
+            <div class="p-2.5 rounded-xl bg-blue-50 text-blue-600 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2a1 1 0 0 1 .897.553l2.846 5.69 5.69 2.846a1 1 0 0 1 0 1.782l-5.69 2.846-2.846 5.69a1 1 0 0 1-1.782 0l-2.846-5.69-5.69-2.846a1 1 0 0 1 0-1.782l5.69-2.846 2.846-5.69A1 1 0 0 1 12 2z" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold tracking-wide">ค้นคว้าและระดมความคิด</span>
+          </button>
+
+          <!-- Tab 2 -->
+          <button onclick="switchFeatureTab(2)" id="feat-tab-2" class="feat-tab-btn flex flex-col items-center space-y-2 border-b-2 border-transparent pb-3 text-slate-500 hover:text-slate-800 focus:outline-none transition-all duration-300">
+            <div class="p-2.5 rounded-xl bg-slate-50 text-slate-500 hover:bg-slate-100 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+              </svg>
+            </div>
+            <span class="text-sm font-semibold tracking-wide">สร้างเนื้อหา</span>
+          </button>
+
+          <!-- Tab 3 -->
+          <button onclick="switchFeatureTab(3)" id="feat-tab-3" class="feat-tab-btn flex flex-col items-center space-y-2 border-b-2 border-transparent pb-3 text-slate-500 hover:text-slate-800 focus:outline-none transition-all duration-300">
+            <div class="p-2.5 rounded-xl bg-slate-50 text-slate-500 hover:bg-slate-100 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <span class="text-sm font-semibold tracking-wide">เขียนและสรุปอีเมล</span>
+          </button>
+
+          <!-- Tab 4 -->
+          <button onclick="switchFeatureTab(4)" id="feat-tab-4" class="feat-tab-btn flex flex-col items-center space-y-2 border-b-2 border-transparent pb-3 text-slate-500 hover:text-slate-800 focus:outline-none transition-all duration-300">
+            <div class="p-2.5 rounded-xl bg-slate-50 text-slate-500 hover:bg-slate-100 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold tracking-wide">เข้าใจได้ทุกเรื่องที่ต้องการ</span>
+          </button>
+
+          <!-- Tab 5 -->
+          <button onclick="switchFeatureTab(5)" id="feat-tab-5" class="feat-tab-btn flex flex-col items-center space-y-2 border-b-2 border-transparent pb-3 text-slate-500 hover:text-slate-800 focus:outline-none transition-all duration-300">
+            <div class="p-2.5 rounded-xl bg-slate-50 text-slate-500 hover:bg-slate-100 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13H6v-2h8v2z"/>
+              </svg>
+            </div>
+            <span class="text-sm font-semibold tracking-wide">ปรับปรุงการประชุม</span>
+          </button>
+
+          <!-- Tab 6 -->
+          <button onclick="switchFeatureTab(6)" id="feat-tab-6" class="feat-tab-btn flex flex-col items-center space-y-2 border-b-2 border-transparent pb-3 text-slate-500 hover:text-slate-800 focus:outline-none transition-all duration-300">
+            <div class="p-2.5 rounded-xl bg-slate-50 text-slate-500 hover:bg-slate-100 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+            </div>
+            <span class="text-sm font-semibold tracking-wide">ปรับปรุงการนำเสนอ</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div id="feat-panels-container" class="mt-3 bg-slate-50/55 rounded-3xl p-8 border border-slate-100">
+        
+        <!-- Panel 1: Research & Brainstorm -->
+        <div id="feat-panel-1" class="feat-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">Research & Brainstorm</span>
+            <h3 class="text-2xl font-bold text-darkSlate">ค้นคว้าและระดมความคิดด้วย Gemini</h3>
+            <p class="text-sm text-indigo-600 font-medium">ผู้ช่วยส่วนตัวในการค้นหาและจุดประกายความคิดสร้างสรรค์</p>
+            <p class="text-sm text-slateGray leading-relaxed">
+              ระดมความคิดในการวางแผนบทเรียนการสอนใหม่ๆ, วิจัยประเด็นเชิงลึก, ค้นหาแหล่งความรู้เฉพาะทาง หรือแปลภาษารวดเร็วด้วยโมเดลภาษาขนาดใหญ่ระดับพรีเมียมจาก Google ที่เข้าใจบริบทอย่างลึกซึ้ง
+            </p>
+            <ul class="space-y-2.5 pt-2 text-sm text-slateGray">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>จุดประกายกิจกรรมการเรียนรู้แบบโต้ตอบ (Interactive Classes)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>สรุปบทความและงานวิจัยวิชาการที่ยาวและยากให้กระชับในทันที</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>รักษาความเป็นส่วนตัวอย่างสมบูรณ์แบบ ข้อมูลวิจัยไม่ถูกนำไปเทรนโมเดล</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 flex justify-center">
+            <!-- Simulated Chat Box Mockup -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200/60 p-5 w-full max-w-[450px] space-y-4 text-left">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-500">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                  <span>Gemini Pro Assistant</span>
+                </div>
+                <span class="text-[9px] text-slate-400">Video Guide</span>
+              </div>
+              
+              <!-- Video Placeholder Box -->
+              <a href="#" target="_blank" class="group block border-2 border-dashed border-slate-200 hover:border-blue-500 bg-slate-50/55 hover:bg-blue-50/30 rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all min-h-[200px]">
+                <div class="w-12 h-12 rounded-full bg-white text-blue-600 flex items-center justify-center shadow-md border border-slate-100 group-hover:scale-110 group-hover:text-blue-700 transition-all mb-3">
+                  <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="block text-[11px] font-bold text-slate-700 group-hover:text-blue-600 transition-colors">วิดีโอแนะนำการค้นคว้าและระดมความคิดด้วย Gemini</span>
+                  <span class="block text-[9px] text-slate-400">คลิกที่นี่เพื่อใส่ลิงก์คลิปวิดีโอแนะนำการใช้งาน (YouTube/Vimeo)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Create Content -->
+        <div id="feat-panel-2" class="feat-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">Docs Content Creation</span>
+            <h3 class="text-2xl font-bold text-darkSlate">สร้างเนื้อหาด้วย Gemini in Docs</h3>
+            <p class="text-sm text-indigo-600 font-medium">ผู้เรียบเรียงเอกสารวิชาการและแผนการสอนคู่กายคุณ</p>
+            <p class="text-sm text-slateGray leading-relaxed">
+              ปลดล็อกขีดจำกัดด้วยระบบช่วยเหลือในการคิดและร่างเอกสาร 'Help me write' ใน Google Docs พิมพ์คำสั่งสั้นๆ เพื่อร่างแผนการสอน คอร์สบัส ข้อสอบ หรือโครงร่างเนื้อหาได้อย่างมีระดับ
+            </p>
+            <ul class="space-y-2.5 pt-2 text-sm text-slateGray">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>สร้างเนื้อหาเริ่มต้นของแผนการสอนรายสัปดาห์ได้ในไม่กี่วินาที</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>ปรับโทนเสียง รูปแบบระดับภาษา และกระชับข้อความให้เรียบร้อย</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>แปลเอกสารหลักสูตรวิชาการเป็นภาษาต่างๆ ได้อย่างง่ายดาย</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 flex justify-center">
+            <!-- Google Docs Mockup -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200/60 p-5 w-full max-w-[450px] text-left space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-500">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                  <span>Google Docs</span>
+                </div>
+                <span class="text-[9px] text-slate-400">Video Guide</span>
+              </div>
+              
+              <!-- Video Placeholder Box -->
+              <a href="#" target="_blank" class="group block border-2 border-dashed border-slate-200 hover:border-blue-500 bg-slate-50/55 hover:bg-blue-50/30 rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all min-h-[200px]">
+                <div class="w-12 h-12 rounded-full bg-white text-blue-600 flex items-center justify-center shadow-md border border-slate-100 group-hover:scale-110 group-hover:text-blue-700 transition-all mb-3">
+                  <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="block text-[11px] font-bold text-slate-700 group-hover:text-blue-600 transition-colors">วิดีโอแนะนำการสร้างเนื้อหาด้วย Gemini ใน Docs</span>
+                  <span class="block text-[9px] text-slate-400">คลิกที่นี่เพื่อใส่ลิงก์คลิปวิดีโอแนะนำการใช้งาน (YouTube/Vimeo)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Write & Summarize Email -->
+        <div id="feat-panel-3" class="feat-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-bold text-red-500 bg-red-50 px-3 py-1 rounded-full uppercase tracking-wider">Email Assistance</span>
+            <h3 class="text-2xl font-bold text-darkSlate">เขียนและสรุปอีเมลด้วย Gemini in Gmail</h3>
+            <p class="text-sm text-indigo-600 font-medium">จัดการกล่องข้อความและการสื่อสารได้เร็วขึ้น 10 เท่า</p>
+            <p class="text-sm text-slateGray leading-relaxed">
+              การตอบกลับการสื่อสารในสถานศึกษาจะไม่ใช่เรื่องกินเวลาอีกต่อไป ร่างจดหมายเชิญวิทยากร หรือร่างจดหมายโต้ตอบกับผู้ปกครองที่สุภาพเป็นทางการ พร้อมระบบสรุปสายสนทนาอีเมลยาวประหยัดเวลา
+            </p>
+            <ul class="space-y-2.5 pt-2 text-sm text-slateGray">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>สรุปการตอบรับทางอีเมลที่มีหลายคนโต้ตอบให้อ่านจบใน 1 นาที</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>เขียนข้อความตอบกลับในสถานการณ์ฉุกเฉินหรือชี้แจงได้อย่างมืออาชีพ</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>ปรับโทนของจดหมายให้สั้นลง ละเอียดขึ้น หรือเป็นทางการขึ้น</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 flex justify-center">
+            <!-- Gmail Mockup -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200/60 p-5 w-full max-w-[450px] text-left space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-500">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span>Gmail</span>
+                </div>
+                <span class="text-[9px] text-slate-400">Video Guide</span>
+              </div>
+              
+              <!-- Video Placeholder Box -->
+              <a href="#" target="_blank" class="group block border-2 border-dashed border-slate-200 hover:border-blue-500 bg-slate-50/55 hover:bg-blue-50/30 rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all min-h-[200px]">
+                <div class="w-12 h-12 rounded-full bg-white text-blue-600 flex items-center justify-center shadow-md border border-slate-100 group-hover:scale-110 group-hover:text-blue-700 transition-all mb-3">
+                  <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="block text-[11px] font-bold text-slate-700 group-hover:text-blue-600 transition-colors">วิดีโอแนะนำการเขียนและสรุปอีเมลใน Gmail</span>
+                  <span class="block text-[9px] text-slate-400">คลิกที่นี่เพื่อใส่ลิงก์คลิปวิดีโอแนะนำการใช้งาน (YouTube/Vimeo)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: Understand Anything -->
+        <div id="feat-panel-4" class="feat-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-bold text-slate-800 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">NotebookLM Research</span>
+            <h3 class="text-2xl font-bold text-darkSlate">เข้าใจได้ทุกเรื่องด้วย NotebookLM</h3>
+            <p class="text-sm text-indigo-600 font-medium">เปลี่ยนไฟล์ข้อมูลดิบให้เป็นขุมทรัพย์แห่งปัญญา</p>
+            <p class="text-sm text-slateGray leading-relaxed">
+              สร้างคลังความรู้วิจัยอัจฉริยะส่วนตัว นำเข้าไฟล์ PDF, ไฟล์เสียง, Google Docs หรือเว็บไซต์ เพื่อเป็นข้อมูลฐานหลัก (Grounding) ในการวิเคราะห์ตอบคำถาม และสร้างเนื้อหาการเรียนรู้ที่แม่นยำสูง
+            </p>
+            <ul class="space-y-2.5 pt-2 text-sm text-slateGray">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>ตอบคำถามโดยอ้างอิงตรงประเด็นจากเอกสารจริง มีแหล่งอ้างอิงนำกลับไปสืบค้นได้</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>สร้างไกด์ไลน์สรุปเนื้อหาบทเรียน (Study Guide) หรือแบบทดสอบประเมิน</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>วิเคราะห์ข้อมูลวิชาการข้ามเอกสารหลายฉบับได้อย่างรวดเร็ว</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 flex justify-center">
+            <!-- NotebookLM Mockup -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200/60 p-5 w-full max-w-[450px] text-left space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-500">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-slate-800"></span>
+                  <span>NotebookLM</span>
+                </div>
+                <span class="text-[9px] text-slate-400">Video Guide</span>
+              </div>
+              
+              <!-- Video Placeholder Box -->
+              <a href="#" target="_blank" class="group block border-2 border-dashed border-slate-200 hover:border-blue-500 bg-slate-50/55 hover:bg-blue-50/30 rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all min-h-[200px]">
+                <div class="w-12 h-12 rounded-full bg-white text-blue-600 flex items-center justify-center shadow-md border border-slate-100 group-hover:scale-110 group-hover:text-blue-700 transition-all mb-3">
+                  <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="block text-[11px] font-bold text-slate-700 group-hover:text-blue-600 transition-colors">วิดีโอแนะนำการใช้งาน NotebookLM ช่วยวิจัย</span>
+                  <span class="block text-[9px] text-slate-400">คลิกที่นี่เพื่อใส่ลิงก์คลิปวิดีโอแนะนำการใช้งาน (YouTube/Vimeo)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5: Improve Meetings -->
+        <div id="feat-panel-5" class="feat-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full uppercase tracking-wider">Meet Productivity</span>
+            <h3 class="text-2xl font-bold text-darkSlate">ปรับปรุงการประชุมด้วย Gemini in Meet</h3>
+            <p class="text-sm text-indigo-600 font-medium">ประชุมได้อย่างมีประสิทธิภาพ ไม่พลาดประเด็นสำคัญ</p>
+            <p class="text-sm text-slateGray leading-relaxed">
+              ให้ AI ช่วยดูแลการประชุมสัมมนาวิชาการของคุณแทนการมานั่งจดรายละเอียดจุกจิกด้วย 'Take notes for me' บันทึกจุดประเด็นอภิปราย และแปลภาษาคำบรรยายแบบเรียลไทม์
+            </p>
+            <ul class="space-y-2.5 pt-2 text-sm text-slateGray">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>สร้างสรุปบันทึกการประชุมและส่งอีเมลแจ้งรายบุคคลอัตโนมัติหลังประชุมจบ</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>คำบรรยายแปลภาษา (Live Captioning) กว่า 50 ภาษาทั่วโลกในการเรียนร่วม</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>ปรับแสงวิดีโอและตัดเสียงรบกวนรอบข้างด้วย AI สุดล้ำ</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 flex justify-center">
+            <!-- Meet Mockup -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200/60 p-5 w-full max-w-[450px] text-left space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-500">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                  <span>Google Meet</span>
+                </div>
+                <span class="text-[9px] text-slate-400">Video Guide</span>
+              </div>
+              
+              <!-- Video Placeholder Box -->
+              <a href="#" target="_blank" class="group block border-2 border-dashed border-slate-200 hover:border-blue-500 bg-slate-50/55 hover:bg-blue-50/30 rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all min-h-[200px]">
+                <div class="w-12 h-12 rounded-full bg-white text-blue-600 flex items-center justify-center shadow-md border border-slate-100 group-hover:scale-110 group-hover:text-blue-700 transition-all mb-3">
+                  <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="block text-[11px] font-bold text-slate-700 group-hover:text-blue-600 transition-colors">วิดีโอแนะนำการประชุมด้วย Gemini ใน Meet</span>
+                  <span class="block text-[9px] text-slate-400">คลิกที่นี่เพื่อใส่ลิงก์คลิปวิดีโอแนะนำการใช้งาน (YouTube/Vimeo)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 6: Improve Presentations -->
+        <div id="feat-panel-6" class="feat-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4 text-left">
+            <span class="text-xs font-bold text-yellow-600 bg-yellow-50 px-3 py-1 rounded-full uppercase tracking-wider">Visual & Video Presentation</span>
+            <h3 class="text-2xl font-bold text-darkSlate">ปรับปรุงการนำเสนอใน Google Slides & Vids</h3>
+            <p class="text-sm text-indigo-600 font-medium">ยกระดับจินตนาการและงานนำเสนอให้น่าทึ่ง</p>
+            <p class="text-sm text-slateGray leading-relaxed">
+              ช่วยสร้างและตกแต่งสไลด์การนำเสนอสอนหนังสือของคุณอย่างรวดเร็วด้วยการสร้างรูปภาพประกอบสวยงาม (Image Generation) หรือสร้างสื่อการสอนวิดีโอใน Google Vids โดยเขียนบรรยายไอเดียเบื้องต้น
+            </p>
+            <ul class="space-y-2.5 pt-2 text-sm text-slateGray">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>สร้างภาพประกอบการเรียนการสอนสไตล์ต่างๆ จากการบรรยายธรรมดา</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>เรียงลำดับสตอรี่บอร์ดประกอบการสร้างวิดีโอนำเสนอความรู้อย่างชาญฉลาด</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>เลือกใช้เสียงพากย์สังเคราะห์ที่เสมือนจริงในวิดีโอช่วยสื่อการสอน</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 flex justify-center">
+            <!-- Slides & Vids Mockup -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200/60 p-5 w-full max-w-[450px] text-left space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-500">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span>Google Slides / Vids</span>
+                </div>
+                <span class="text-[9px] text-slate-400">Video Guide</span>
+              </div>
+              
+              <!-- Video Placeholder Box -->
+              <a href="#" target="_blank" class="group block border-2 border-dashed border-slate-200 hover:border-blue-500 bg-slate-50/55 hover:bg-blue-50/30 rounded-xl p-6 flex flex-col items-center justify-center text-center transition-all min-h-[200px]">
+                <div class="w-12 h-12 rounded-full bg-white text-blue-600 flex items-center justify-center shadow-md border border-slate-100 group-hover:scale-110 group-hover:text-blue-700 transition-all mb-3">
+                  <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="block text-[11px] font-bold text-slate-700 group-hover:text-blue-600 transition-colors">วิดีโอแนะนำการสร้างสไลด์และวิดีโอด้วย AI</span>
+                  <span class="block text-[9px] text-slate-400">คลิกที่นี่เพื่อใส่ลิงก์คลิปวิดีโอแนะนำการใช้งาน (YouTube/Vimeo)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: TARGET AUDIENCE BENEFITS ==================== -->
+  <section id="benefits" class="py-20 bg-slate-50 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold text-darkSlate mb-4">ปลดล็อกศักยภาพสูงสุดของบุคลากรทางการศึกษา</h2>
+        <div class="w-16 h-1.5 bg-gradient-to-r from-googleBlue to-geminiPurple mx-auto rounded-full mb-6"></div>
+        <p class="text-base sm:text-lg text-slateGray">
+          ออกแบบโดยเน้นการยกระดับประสบการณ์ของผู้มีส่วนได้ส่วนเสียในวงการศึกษาไทยอย่างแท้จริง
+        </p>
+      </div>
+
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Educator Benefit -->
+        <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-2 h-full bg-googleBlue"></div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-4xl font-extrabold text-googleBlue/20">01</span>
+            <div class="p-3 bg-blue-50 text-googleBlue rounded-xl">
+              <!-- Hat icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-darkSlate mb-4">สำหรับครูผู้สอน</h3>
+          <p class="text-sm text-slateGray leading-relaxed">
+            <span class="text-indigo-600 font-bold block mb-2">ลดเวลาทำงานเอกสารที่ซ้ำซ้อนอย่างมีนัยสำคัญ</span>
+            ช่วยลดภาระงานเฉลี่ยที่สูงถึง 54 ชั่วโมง/สัปดาห์ (อาทิ แผนการสอน, การออกแบบข้อสอบ และสร้างสื่อวิเคราะห์ผลสอบ) ทำให้ครูมีเวลาทุ่มเทกับการโฟกัส ดูแล และผลักดันศักยภาพนักเรียนเป็นรายบุคคลได้เต็มที่
+          </p>
+        </div>
+
+        <!-- Admin & IT Benefit -->
+        <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-2 h-full bg-geminiIndigo"></div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-4xl font-extrabold text-geminiIndigo/20">02</span>
+            <div class="p-3 bg-indigo-50 text-geminiIndigo rounded-xl">
+              <!-- Gears icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-darkSlate mb-4">สำหรับผู้บริหารและเจ้าหน้าที่ IT</h3>
+          <p class="text-sm text-slateGray leading-relaxed">
+            <span class="text-indigo-600 font-bold block mb-2">สรุปประเด็นนโยบายและความปลอดภัยไร้รอยต่อ</span>
+            สรุปข้อมูลอีเมลและข้อมูลสถิติของสถานศึกษาได้อย่างรวดเร็วและแม่นยำ พร้อมระเบียบควบคุมสิทธิ์การใช้งานผ่านแผงผู้ดูแลระบบกลาง ปลอดภัยตามเงื่อนไขของสถานศึกษา ป้องกันข้อมูลรั่วไหลอย่างสมบูรณ์แบบ
+          </p>
+        </div>
+
+        <!-- Student Benefit -->
+        <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-2 h-full bg-geminiPurple"></div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-4xl font-extrabold text-geminiPurple/20">03</span>
+            <div class="p-3 bg-purple-50 text-geminiPurple rounded-xl">
+              <!-- Student icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-darkSlate mb-4">สำหรับนักเรียนและผู้เรียน</h3>
+          <p class="text-sm text-slateGray leading-relaxed">
+            <span class="text-indigo-600 font-bold block mb-2">สร้างโอกาสการเรียนรู้เฉพาะบุคคล</span>
+            พัฒนาพื้นที่สร้างการเรียนรู้แบบส่วนตัว (Personalized Learning) ที่ปรับพฤติกรรมการสอนและแนะนำตามระดับทักษะความรู้ พร้อมระบบแนะนำตอบกลับและคำวิจารณ์เชิงบวกแบบเรียลไทม์ เพิ่มผลสัมฤทธิ์อย่างก้าวกระโดด
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: ENTERPRISE-GRADE SECURITY & PRIVACY ==================== -->
+  <section id="security" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Shield visual elements -->
+        <div class="lg:col-span-5 flex justify-center relative reveal">
+          <div class="absolute inset-0 bg-gradient-to-tr from-googleBlue/10 to-geminiPurple/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <!-- Shield element with dynamic style -->
+          <div class="relative bg-slate-50 border border-slate-200/60 p-10 rounded-3xl shadow-xl max-w-sm text-center">
+            
+            <!-- Beautiful Big Shield SVG -->
+            <div class="w-28 h-28 mx-auto bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg mb-6 transform hover:rotate-12 transition-transform duration-300">
+              <svg class="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            
+            <span class="text-xs font-bold text-googleBlue bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">Private by Design</span>
+            <h4 class="text-lg font-bold text-darkSlate mt-4">มาตรฐานความปลอดภัยสูงสุด</h4>
+            <p class="text-xs text-slateGray mt-2">คุ้มครองข้อมูลด้วยนโยบายความปลอดภัยของ Google Cloud และข้อกำหนด Workspace for Education</p>
+            
+          </div>
+        </div>
+
+        <!-- Right: Text focus info -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-100 px-4 py-1.5 rounded-full text-emerald-700 text-xs font-semibold tracking-wide">
+            <span>🛡️ รักษาความเป็นส่วนตัว 100%</span>
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-bold text-darkSlate leading-tight">
+            ข้อมูลของคุณปลอดภัย เป็นส่วนตัวตามมาตรฐานสากล
+          </h2>
+          <div class="w-16 h-1.5 bg-gradient-to-r from-googleBlue to-geminiPurple rounded-full mb-4"></div>
+          
+          <p class="text-base text-slateGray leading-relaxed">
+            หมดกังวลเรื่องข้อมูลรั่วไหลหรือการละเมิดลิขสิทธิ์ สถาบันการศึกษาสามารถบูรณาการโมเดลภาษาขนาดใหญ่ (LLM) เข้าสู่ระบบการจัดทำเอกสารได้อย่างไร้ความเสี่ยง
+          </p>
+
+          <!-- Bullet Points -->
+          <ul class="space-y-4 pt-4">
+            
+            <li class="flex items-start">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-1 mr-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <strong class="text-darkSlate text-base block font-bold">ไม่มีการนำข้อมูลไปเทรนโมเดล (No Model Training)</strong>
+                <span class="text-sm text-slateGray">ข้อมูล คำค้นหา ประวัติแชท และเนื้อหาที่อัปโหลดทั้งหมดจะไม่ถูกนำไปสอนโมเดล AI สาธารณะของ Google</span>
+              </div>
+            </li>
+
+            <li class="flex items-start">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-1 mr-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <strong class="text-darkSlate text-base block font-bold">ไม่มีการตรวจรีวิวโดยมนุษย์ (No Human Review)</strong>
+                <span class="text-sm text-slateGray">มั่นใจว่าประวัติการสนทนาของครูและข้อมูลนักเรียนมีความปลอดภัยสูงสุด ไม่ถูกเข้าถึงโดยบุคคลภายนอก</span>
+              </div>
+            </li>
+
+            <li class="flex items-start">
+              <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-1 mr-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <strong class="text-darkSlate text-base block font-bold">คุ้มครองภายใต้ข้อตกลงสถานศึกษา (Educational Terms Compliance)</strong>
+                <span class="text-sm text-slateGray">บริการเสริมนี้อยู่ภายใต้ข้อตกลงหลักประกันสิทธิ์ส่วนบุคคลและข้อมูลผู้เรียนของ Google Workspace for Education เดิมทุกประการ</span>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6: CALL TO ACTION & CONTACT LEAD FORM ==================== -->
+  <section id="contact" class="py-20 bg-slate-50 border-t border-slate-100 relative">
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <!-- Left side: Text Invitation -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-googleBlue via-indigo-700 to-geminiPurple p-8 sm:p-12 text-white flex flex-col justify-between">
+            <div class="space-y-6">
+              <span class="text-xs font-bold bg-white/20 px-3 py-1 rounded-full uppercase tracking-wider inline-block">Exclusive Offer</span>
+              <h3 class="text-2xl sm:text-3xl font-bold leading-tight">เริ่มต้นใช้งานพร้อมข้อเสนอที่คุ้มค่าที่สุด</h3>
+              <p class="text-sm text-indigo-100 leading-relaxed">
+                เตรียมความพร้อมสถานศึกษาของคุณให้พร้อมรับมือยุค AI ดิจิทัล ขอใบเสนอราคาระดับสถาบัน และทดลองรับการสาธิต (Demo Live) ร่วมกับผู้เชี่ยวชาญ S-Curve ฟรีวันนี้
+              </p>
+            </div>
+            
+            <div class="pt-8 border-t border-white/20 mt-8 space-y-4">
+              <div class="flex items-center space-x-3 text-xs text-indigo-100">
+                <span class="p-2 bg-white/10 rounded-lg">🛡️</span>
+                <span>ข้อมูลติดต่อจะเก็บเป็นความลับสูงสุด</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-indigo-100">
+                <span class="p-2 bg-white/10 rounded-lg">⚡</span>
+                <span>เจ้าหน้าที่ติดต่อกลับเพื่อแนะนำภายใน 24 ชม.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Contact Form -->
+          <div class="lg:col-span-7 p-8 sm:p-12">
+            <h4 class="text-xl font-bold text-darkSlate mb-2">ลงทะเบียนเพื่อรับคำปรึกษาและข้อเสนอพิเศษ</h4>
+            <p class="text-xs text-slate-400 mb-6">กรุณากรอกข้อมูลส่วนบุคคลและข้อมูลหน่วยงานของคุณให้ครบถ้วน</p>
+            
+            <form id="lead-contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+              
+              <!-- Row 1: Name and Institution -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="full-name" class="block text-xs font-bold text-darkSlate mb-1.5">ชื่อ-นามสกุล <span class="text-rose-500">*</span></label>
+                  <input type="text" id="full-name" required class="w-full bg-slate-50 border border-slate-200 focus:border-googleBlue focus:ring-1 focus:ring-googleBlue rounded-lg px-4 py-2.5 text-xs text-darkSlate transition-colors outline-none" placeholder="ภาษาไทยหรืออังกฤษ">
+                  <p id="error-name" class="hidden text-[10px] text-rose-500 mt-1">กรุณากรอกชื่อ-นามสกุลของคุณ</p>
+                </div>
+                <div>
+                  <label for="institution-name" class="block text-xs font-bold text-darkSlate mb-1.5">ชื่อโรงเรียน/สถาบันการศึกษา <span class="text-rose-500">*</span></label>
+                  <input type="text" id="institution-name" required class="w-full bg-slate-50 border border-slate-200 focus:border-googleBlue focus:ring-1 focus:ring-googleBlue rounded-lg px-4 py-2.5 text-xs text-darkSlate transition-colors outline-none" placeholder="ตัวอย่าง: โรงเรียนสาธิตฯ มหาวิทยาลัย...">
+                  <p id="error-institution" class="hidden text-[10px] text-rose-500 mt-1">กรุณากรอกชื่อสถาบันการศึกษาของคุณ</p>
+                </div>
+              </div>
+
+              <!-- Row 2: Email and Phone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="work-email" class="block text-xs font-bold text-darkSlate mb-1.5">อีเมลหน่วยงาน/สถาบัน <span class="text-rose-500">*</span></label>
+                  <input type="email" id="work-email" required class="w-full bg-slate-50 border border-slate-200 focus:border-googleBlue focus:ring-1 focus:ring-googleBlue rounded-lg px-4 py-2.5 text-xs text-darkSlate transition-colors outline-none" placeholder="ตัวอย่าง: name@school.ac.th">
+                  <p id="error-email" class="hidden text-[10px] text-rose-500 mt-1">กรุณากรอกอีเมลที่ถูกต้อง (ตัวอย่าง: name@school.ac.th)</p>
+                </div>
+                <div>
+                  <label for="phone-number" class="block text-xs font-bold text-darkSlate mb-1.5">เบอร์โทรศัพท์ติดต่อ <span class="text-rose-500">*</span></label>
+                  <input type="tel" id="phone-number" required class="w-full bg-slate-50 border border-slate-200 focus:border-googleBlue focus:ring-1 focus:ring-googleBlue rounded-lg px-4 py-2.5 text-xs text-darkSlate transition-colors outline-none" placeholder="ตัวอย่าง: 0812345678">
+                  <p id="error-phone" class="hidden text-[10px] text-rose-500 mt-1">กรุณากรอกเบอร์โทรศัพท์ที่ถูกต้อง 10 หลัก</p>
+                </div>
+              </div>
+
+              <!-- Message Textarea -->
+              <div>
+                <label for="message" class="block text-xs font-bold text-darkSlate mb-1.5">ข้อความเพิ่มเติม/ความต้องการระบุเฉพาะเจาะจง</label>
+                <textarea id="message" rows="3" class="w-full bg-slate-50 border border-slate-200 focus:border-googleBlue focus:ring-1 focus:ring-googleBlue rounded-lg px-4 py-2.5 text-xs text-darkSlate transition-colors outline-none resize-none" placeholder="เช่น จำนวนสิทธิ์บัญชีผู้ใช้ หรือการสนับสนุนเพิ่มเติมที่คุณต้องการ..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-2">
+                <button type="submit" class="w-full bg-gradient-to-r from-googleBlue to-indigo-600 hover:from-googleBlue/95 hover:to-indigo-600/95 text-white font-bold py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm flex items-center justify-center space-x-2">
+                  <span>ส่งคำขอเสนอรับข้อเสนอพิเศษ</span>
+                  <!-- Send icon -->
+                  <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7: FOOTER ==================== -->
+  <footer class="bg-darkSlate text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8 border-b border-slate-800">
+        
+        <!-- Logo and details -->
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center space-x-2 text-white">
+            <span class="w-3 h-3 rounded-full bg-googleBlue"></span>
+            <span class="w-3 h-3 rounded-full bg-geminiIndigo"></span>
+            <span class="w-3 h-3 rounded-full bg-geminiPurple"></span>
+            <span class="font-bold text-lg">Google AI Pro for Education</span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm">
+            พันธมิตรการผลักดัน AI เพื่อยกระดับสถานศึกษาไทยอย่างปลอดภัย ไร้รอยต่อ และถูกลิขสิทธิ์ระดับองค์กร
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="md:col-span-7 flex flex-wrap md:justify-end gap-x-8 gap-y-4 text-xs font-medium">
+          <a href="#features" class="hover:text-white transition-colors">ฟีเจอร์เด่น</a>
+          <a href="#benefits" class="hover:text-white transition-colors">ประโยชน์ใช้งาน</a>
+          <a href="#security" class="hover:text-white transition-colors">ความปลอดภัย</a>
+          <a href="#contact" class="hover:text-white transition-colors">ขอใบเสนอราคา</a>
+          <a href="#" class="hover:text-white transition-colors">นโยบายความเป็นส่วนตัว</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Partners -->
+      <div class="flex flex-col sm:flex-row items-center justify-between pt-8 text-[11px] text-slate-500">
+        <p>&copy; 2026 Google AI Pro for Education Partnership. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0 flex items-center space-x-1">
+          <span>ขับเคลื่อนการตลาดและการบริหารสิทธิ์โดย</span>
+          <a href="https://workspace.scurvethai.com" target="_blank" class="text-indigo-400 hover:text-indigo-300 font-bold transition-colors">S-Curve Workspace Partner</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== DIALOGUE MODAL: VIDEO INTRODUCTION ==================== -->
+  <div id="video-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4 transition-all duration-300">
+    <div class="relative bg-darkSlate rounded-2xl overflow-hidden max-w-3xl w-full aspect-video shadow-2xl border border-slate-800">
+      
+      <!-- Close button -->
+      <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 bg-black/60 hover:bg-black text-white p-2 rounded-full transition-colors focus:outline-none">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Video player wrapper -->
+      <div class="w-full h-full flex items-center justify-center bg-slate-950">
+        <!-- Embedded video simulation, using HTML5 video or premium placeholder -->
+        <div class="text-center p-6 space-y-4">
+          <div class="w-16 h-16 bg-indigo-600/20 text-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-500/30">
+            <svg class="w-8 h-8 fill-indigo-500" viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>
+          </div>
+          <h4 class="text-lg font-bold text-white">วิดีโอแนะนำการเรียนการสอนด้วย Gemini AI</h4>
+          <p class="text-xs text-slate-400 max-w-sm mx-auto">นี่คือแบบจำลองการรับชมวิดีโอสัมภาษณ์ผู้ใช้งานจริง และการใช้งานใน Google Docs, Gmail และ Sheets ในชีวิตจริง</p>
+          <button onclick="closeVideoModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-6 py-2 rounded-full transition-all">ปิดรับชม</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION: SUCCESS SUBMIT ==================== -->
+  <div id="success-toast" class="fixed bottom-6 right-6 z-50 hidden transform translate-y-10 opacity-0 transition-all duration-500">
+    <div class="bg-white border border-emerald-100 rounded-2xl shadow-xl p-4 flex items-center space-x-4 max-w-sm backdrop-blur-md bg-white/90">
+      <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <div>
+        <h5 class="text-sm font-bold text-darkSlate">ส่งข้อมูลติดต่อสำเร็จ!</h5>
+        <p class="text-[11px] text-slateGray mt-0.5">เจ้าหน้าที่ S-Curve จะติดต่อกลับท่านภายใน 24 ชั่วโมง</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT LOGIC & INTERACTIONS ==================== -->
+  <script>
+    // ----------------------------------------------------
+    // Mobile Navigation Toggle
+    // ----------------------------------------------------
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuToggleBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenu.classList.contains('hidden');
+      if (isExpanded) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu on scroll link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // ----------------------------------------------------
+    // Video Modal Controller
+    // ----------------------------------------------------
+    const videoModal = document.getElementById('video-modal');
+
+    function openVideoModal() {
+      videoModal.classList.remove('hidden');
+      videoModal.classList.add('flex');
+    }
+
+    function closeVideoModal() {
+      videoModal.classList.add('hidden');
+      videoModal.classList.remove('flex');
+    }
+
+    // Close modal on click background
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) {
+        closeVideoModal();
+      }
+    });
+
+    // ----------------------------------------------------
+    // Scroll Reveal Animation (Intersection Observer)
+    // ----------------------------------------------------
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    // Add default reveal style helper internally
+    revealElements.forEach(el => {
+      el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ----------------------------------------------------
+    // Scroll Navigation Active State
+    // ----------------------------------------------------
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollPosition = window.scrollY + 100; // Offset for fixed header
+
+      // Toggle Sticky Header shadow
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-md');
+      } else {
+        header.classList.remove('shadow-md');
+      }
+
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollPosition >= top && scrollPosition < top + height) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ----------------------------------------------------
+    // Dashboard Gemini Simulator Logic
+    // ----------------------------------------------------
+    let activeTab = 'doc'; // 'doc' or 'sheet'
+    let isSimulating = false;
+
+    // Tabs switcher
+    function switchSimulatorTab(tab) {
+      if (isSimulating) return; // Prevent tab switching during typing demo
+      activeTab = tab;
+
+      const docWorkspace = document.getElementById('sim-doc-workspace');
+      const sheetWorkspace = document.getElementById('sim-sheet-workspace');
+      
+      const tabDocBtn = document.getElementById('tab-doc-btn');
+      const tabSheetBtn = document.getElementById('tab-sheet-btn');
+
+      const docsPrompts = document.getElementById('docs-prompts');
+      const sheetsPrompts = document.getElementById('sheets-prompts');
+
+      if (tab === 'doc') {
+        docWorkspace.classList.remove('hidden');
+        sheetWorkspace.classList.add('hidden');
+        
+        tabDocBtn.className = 'px-3 py-1 rounded font-medium bg-white text-indigo-600 shadow-sm transition-all';
+        tabSheetBtn.className = 'px-3 py-1 rounded font-medium text-slate-500 hover:bg-white/50 transition-all';
+
+        docsPrompts.classList.remove('hidden');
+        sheetsPrompts.classList.add('hidden');
+      } else {
+        docWorkspace.classList.add('hidden');
+        sheetWorkspace.classList.remove('hidden');
+
+        tabDocBtn.className = 'px-3 py-1 rounded font-medium text-slate-500 hover:bg-white/50 transition-all';
+        tabSheetBtn.className = 'px-3 py-1 rounded font-medium bg-white text-indigo-600 shadow-sm transition-all';
+
+        docsPrompts.classList.add('hidden');
+        sheetsPrompts.classList.remove('hidden');
+      }
+    }
+
+    // Simulator engine
+    function triggerSimulate(type) {
+      if (isSimulating) return;
+      isSimulating = true;
+
+      const statusText = document.getElementById('gemini-status-text');
+      const docCanvas = document.getElementById('doc-canvas');
+      const dialogue = document.getElementById('gemini-dialogue');
+
+      // Clear previous outputs
+      docCanvas.innerHTML = '';
+      
+      // Prompts databases
+      const promptsData = {
+        lesson: {
+          prompt: "ช่วยร่างแผนการสอนเรื่อง ระบบสุริยะ ป.5",
+          response: "กำลังประมวลผลแผนการสอนวิชาวิทยาศาสตร์...",
+          result: `**แผนการสอน: เรื่องระบบสุริยะ ป.5**
+
+**1. เป้าหมายการเรียนรู้:**
+ให้นักเรียนเข้าใจตำแหน่งการโคจรของดาวเคราะห์และรู้จักโครงสร้างของดวงอาทิตย์อย่างถูกต้อง
+
+**2. กิจกรรมการสอน (50 นาที):**
+- **ขั้นนำ (10 นาที):** แสดงวิดีโอสามมิติการหมุนของดาวเคราะห์ในระบบสุริยะ
+- **ขั้นสอน (30 นาที):** ครูบรรยายพร้อมเปรียบเทียบขนาดสัมพัทธ์ของดาวเคราะห์แต่ละดวง
+- **ขั้นสรุป (10 นาที):** เล่นเกมจับคู่ตอบคำถามด้วยอุปกรณ์อิเล็กทรอนิกส์
+
+**3. เกณฑ์วัดผล:** ประเมินจากการทำงานกลุ่มและแบบทดสอบสั้น`
+        },
+        email: {
+          prompt: "เขียนอีเมลภาษาไทยเชิญวิทยากรบรรยายเรื่อง AI",
+          response: "กำลังร่างจดหมายประสานเชิญวิทยากร...",
+          result: `เรียน ท่านวิทยากรผู้ทรงคุณวุฒิ,
+
+เนื่องด้วยทางสถาบันต้องการจัดงานอบรมวิชาการหัวข้อ "ทิศทางและการใช้ปัญญาประดิษฐ์ (AI) ในภาคการศึกษายุค 2026" เพื่อเปิดโลกการเรียนรู้เชิงลึกของคณาจารย์
+
+ทางสถาบันจึงใคร่เรียนเชิญท่านให้เกียรติเป็นวิทยากรบรรยายพิเศษในวันที่ 25 มิถุนายน 2026 เวลา 09:00 - 12:00 น.
+
+หวังเป็นอย่างยิ่งว่าจะได้รับการตอบรับอันดีจากท่าน
+
+ขอแสดงความนับถืออย่างสูง
+ฝ่ายบริหารวิชาการสถานศึกษา`
+        },
+        grades: {
+          prompt: "สร้างสูตรประเมินเกรดและคะแนนสำหรับครู",
+          response: "ประมวลผล Enhanced Smart Fill เพื่อวิเคราะห์ผลคะแนนเกรด...",
+          result: "สูตรสำเร็จ" // Internal trigger
+        },
+        feedback: {
+          prompt: "เขียนคำติชมรายบุคคลจากคะแนนวิชาคณิตศาสตร์",
+          response: "กำลังประเมินและร่างความเห็นตอบกลับนักเรียน...",
+          result: "คำวิจารณ์" // Internal trigger
+        }
+      };
+
+      const selected = promptsData[type];
+      if (!selected) return;
+
+      // Update Gemini Status
+      dialogue.innerHTML = `
+        <div class="text-[9px] bg-slate-200 text-slate-700 px-2 py-1 rounded mb-1 self-end text-right">
+          <strong>คำถาม:</strong> ${selected.prompt}
+        </div>
+        <div class="text-[10px] bg-white border border-slate-200 p-2 rounded-lg leading-relaxed text-darkSlate">
+          <p class="font-semibold text-geminiIndigo mb-1">Gemini:</p>
+          <p class="animate-pulse" id="gemini-generating">${selected.response}</p>
+        </div>
+      `;
+
+      // Simulating delay for Gemini writing back
+      setTimeout(() => {
+        // Complete generation response
+        const generatingEl = document.getElementById('gemini-generating');
+        if (generatingEl) {
+          generatingEl.classList.remove('animate-pulse');
+          generatingEl.innerHTML = "ร่างเนื้อหาเสร็จสมบูรณ์แล้ว! กำลังส่งข้อมูลเข้าสู่พื้นที่ทำงาน...";
+        }
+
+        // Simulating text filling visual action
+        setTimeout(() => {
+          if (type === 'lesson' || type === 'email') {
+            typeWriter(selected.result, docCanvas, () => {
+              isSimulating = false;
+            });
+          } else if (type === 'grades') {
+            // Apply grades update inside the grid table
+            document.getElementById('cell-grade-1').innerHTML = 'A';
+            document.getElementById('cell-grade-1').className = 'px-2 py-1.5 text-emerald-700 font-bold bg-emerald-50 transition-all';
+            
+            document.getElementById('cell-grade-2').innerHTML = 'A+';
+            document.getElementById('cell-grade-2').className = 'px-2 py-1.5 text-emerald-700 font-bold bg-emerald-50 transition-all';
+
+            document.getElementById('cell-grade-3').innerHTML = 'C+';
+            document.getElementById('cell-grade-3').className = 'px-2 py-1.5 text-amber-700 font-bold bg-amber-50 transition-all';
+
+            isSimulating = false;
+          } else if (type === 'feedback') {
+            // Simulated response on sheets
+            const sheetsTbody = document.getElementById('sheets-tbody');
+            // Check if feedback row is already present
+            if (!document.getElementById('feedback-row-1')) {
+              // Add comments dynamically
+              const row1 = sheetsTbody.rows[0];
+              const row2 = sheetsTbody.rows[1];
+              const row3 = sheetsTbody.rows[2];
+              
+              row1.insertCell(4).innerHTML = '<span class="text-slate-500 italic block min-w-[80px]">ผลการเรียนดีมาก ใส่ใจดี</span>';
+              row2.insertCell(4).innerHTML = '<span class="text-slate-500 italic block min-w-[80px]">ดีเลิศ มีความเข้าใจสูง</span>';
+              row3.insertCell(4).innerHTML = '<span class="text-slate-500 italic block min-w-[80px]">ต้องทบทวนสูตรเพิ่มเติม</span>';
+            }
+            isSimulating = false;
+          }
+        }, 800);
+
+      }, 1500);
+
+    }
+
+    // Typewriter effect helper
+    function typeWriter(text, element, callback) {
+      let index = 0;
+      element.innerHTML = '';
+      
+      function type() {
+        if (index < text.length) {
+          const char = text.charAt(index);
+          // Convert linebreaks to HTML breaks
+          if (char === '\n') {
+            element.innerHTML += '<br>';
+          } else {
+            element.innerHTML += char;
+          }
+          index++;
+          setTimeout(type, 15); // Adjust typing speed here
+        } else {
+          if (callback) callback();
+        }
+      }
+      type();
+    }
+
+    // ----------------------------------------------------
+    // Contact Lead Form Validation & Success Toast
+    // ----------------------------------------------------
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      // Retrieve elements
+      const nameInput = document.getElementById('full-name');
+      const institutionInput = document.getElementById('institution-name');
+      const emailInput = document.getElementById('work-email');
+      const phoneInput = document.getElementById('phone-number');
+
+      const errorName = document.getElementById('error-name');
+      const errorInstitution = document.getElementById('error-institution');
+      const errorEmail = document.getElementById('error-email');
+      const errorPhone = document.getElementById('error-phone');
+
+      let isValid = true;
+
+      // Validate name
+      if (!nameInput.value.trim()) {
+        errorName.classList.remove('hidden');
+        isValid = false;
+      } else {
+        errorName.classList.add('hidden');
+      }
+
+      // Validate institution
+      if (!institutionInput.value.trim()) {
+        errorInstitution.classList.remove('hidden');
+        isValid = false;
+      } else {
+        errorInstitution.classList.add('hidden');
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value.trim())) {
+        errorEmail.classList.remove('hidden');
+        isValid = false;
+      } else {
+        errorEmail.classList.add('hidden');
+      }
+
+      // Validate phone format (must be digits, min 9-10 digits)
+      const phoneRegex = /^[0-9]{9,10}$/;
+      if (!phoneRegex.test(phoneInput.value.trim())) {
+        errorPhone.classList.remove('hidden');
+        isValid = false;
+      } else {
+        errorPhone.classList.add('hidden');
+      }
+
+      if (isValid) {
+        // Form is valid - Trigger Toast notification
+        const toast = document.getElementById('success-toast');
+        toast.classList.remove('hidden');
+        // Simple slide-in animation using opacity and transform classes
+        setTimeout(() => {
+          toast.classList.remove('translate-y-10', 'opacity-0');
+          toast.classList.add('translate-y-0', 'opacity-100');
+        }, 50);
+
+        // Clear form fields
+        document.getElementById('lead-contact-form').reset();
+
+        // Dismiss Toast after 5 seconds
+        setTimeout(() => {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-10', 'opacity-0');
+          setTimeout(() => {
+            toast.classList.add('hidden');
+          }, 500);
+        }, 5000);
+      }
+    }
+
+    // ----------------------------------------------------
+    // Showcase Feature Tabs Switcher
+    // ----------------------------------------------------
+    function switchFeatureTab(index) {
+      for (let i = 1; i <= 6; i++) {
+        const panel = document.getElementById(`feat-panel-${i}`);
+        const tab = document.getElementById(`feat-tab-${i}`);
+        if (!panel || !tab) continue;
+        
+        const iconContainer = tab.querySelector('div');
+        
+        if (i === index) {
+          panel.classList.remove('hidden');
+          tab.classList.remove('border-transparent', 'text-slate-500', 'hover:text-slate-800');
+          tab.classList.add('border-blue-600', 'text-blue-600');
+          
+          if (iconContainer) {
+            iconContainer.classList.remove('bg-slate-50', 'text-slate-500', 'hover:bg-slate-100');
+            iconContainer.classList.add('bg-blue-50', 'text-blue-600');
+          }
+        } else {
+          panel.classList.add('hidden');
+          tab.classList.remove('border-blue-600', 'text-blue-600');
+          tab.classList.add('border-transparent', 'text-slate-500', 'hover:text-slate-800');
+          
+          if (iconContainer) {
+            iconContainer.classList.remove('bg-blue-50', 'text-blue-600');
+            iconContainer.classList.add('bg-slate-50', 'text-slate-500', 'hover:bg-slate-100');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

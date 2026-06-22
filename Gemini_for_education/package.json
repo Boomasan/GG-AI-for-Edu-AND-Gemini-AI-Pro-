@@ -1,0 +1,23 @@
+{
+  "name": "gemini-for-education",
+  "version": "1.0.0",
+  "description": "Landing page for Gemini for Education",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview"
+  },
+  "keywords": [
+    "gemini",
+    "education",
+    "google-workspace"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
