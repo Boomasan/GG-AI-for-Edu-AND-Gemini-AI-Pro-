@@ -19,10 +19,29 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   const safeUrl = req.url.split('?')[0];
-  let filePath = path.join(WORKSPACE_DIR, safeUrl === '/' ? 'index.html' : safeUrl);
   
+  // Custom routing
+  let targetPath = safeUrl;
+  if (safeUrl === '/') {
+    targetPath = '/index.html';
+  } else if (safeUrl === '/agents') {
+    targetPath = '/agents.html';
+  } else if (safeUrl === '/resources') {
+    targetPath = '/resources.html';
+  }
+  
+  let filePath = path.join(WORKSPACE_DIR, targetPath);
+  
+  // Extensionless routing fallback
   const extname = path.extname(filePath);
-  let contentType = MIME_TYPES[extname] || 'application/octet-stream';
+  if (!extname) {
+    if (fs.existsSync(filePath + '.html')) {
+      filePath += '.html';
+    }
+  }
+  
+  const finalExtname = path.extname(filePath);
+  let contentType = MIME_TYPES[finalExtname] || 'application/octet-stream';
 
   fs.readFile(filePath, (err, content) => {
     if (err) {
@@ -61,10 +80,9 @@ process.stdin.on('data', (data) => {
     process.exit(0);
   } else if (input === 'o') {
     const url = `http://localhost:${PORT}/`;
-    console.log(`\n  \x1b[32m➜\x1b[0m  กำลังเปิด ${url} ในเบราว์เซอร์...`);
+    console.log(`\n  \x1b[32m➜  กำลังเปิด ${url} ในเบราว์เซอร์...`);
     const exec = require('child_process').exec;
     const startCmd = process.platform === 'win32' ? 'start' : process.platform === 'darwin' ? 'open' : 'xdg-open';
     exec(`${startCmd} ${url}`);
   }
 });
-
