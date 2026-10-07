@@ -1,115 +1,1692 @@
 <!DOCTYPE html>
 <html lang="en" class="antialiased">
-<head>
-<meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="preload" as="image" href="https://storage.googleapis.com/scurvestorageweb/logo/TheSCurveLogo_New.png"/>
-<link rel="preload" as="image" href="https://www.gstatic.com/bricks/image/cdbc45f1-8842-4971-9c77-c9ac4381bb18.png"/>
-<link rel="preload" as="image" href="https://storage.googleapis.com/gweb-cloudblog-publish/images/0_gemini_enterprise_agent_platform.max-2600x2600.jpg"/>
-<link rel="preload" href="https://storage.googleapis.com/scurvestorageweb/logo/tier_gcp_cosell_select.png" as="image"/>
-<link rel="preload" href="https://storage.googleapis.com/scurvestorageweb/logo/tier_gws_cosell_and_service_premier.png" as="image"/>
-<link rel="preload" as="image" href="https://www.gstatic.com/bricks/image/e13e28cd-59ae-4059-9747-912b4dcb8852.png"/>
-<link rel="preload" as="image" href="https://www.gstatic.com/bricks/image/86ea23fa-0d6d-4c61-8b6a-46f34748c8fe.png"/>
-<link rel="preload" as="image" href="https://www.gstatic.com/bricks/image/3e681d6b-95a9-4648-ae39-fe0f99cc5c5f.png"/>
-<link rel="preload" as="image" href="https://www.gstatic.com/bricks/image/8ba475a8-4d00-4010-a6f7-737935376bc2.png"/>
-<link rel="preload" href="https://storage.googleapis.com/scurvestorageweb/logo/The_S_Curve_Logo_2026_White.png" as="image"/>
-<link rel="stylesheet" href="/style.css" data-precedence="next"/>
 
-<link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-S2Y9E4WJP5" as="script"/>
-<title>The S Curve | Enterprise AI Consulting</title><meta name="description" content="Elevate Your Enterprise with AI. Guided by The S Curve."/>
-<link rel="icon" href="/icon.png?icon.0vg.0eoo901ey.png" sizes="1156x1648" type="image/png"/>
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" as="image" href="https://storage.googleapis.com/scurvestorageweb/logo/TheSCurveLogo_New.png" />
+    <link rel="preload" as="image"
+        href="https://www.gstatic.com/bricks/image/cdbc45f1-8842-4971-9c77-c9ac4381bb18.png" />
+    <link rel="preload" href="https://storage.googleapis.com/scurvestorageweb/logo/The_S_Curve_Logo_2026_White.png"
+        as="image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" data-precedence="next" />
+    <title>The S Curve | Enterprise AI Consulting</title>
+    <meta name="description" content="Elevate Your Enterprise with AI. Guided by The S Curve." />
+    <link rel="icon" href="/icon.png?icon.0vg.0eoo901ey.png" sizes="1156x1648" type="image/png" />
+    <style>
+        /* Custom styles for education tabs */
+        .edu-video-container {
+            position: relative;
+            width: 100%;
+            height: 320px; /* Responsive mobile height */
+            border-radius: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+        @media (min-width: 768px) {
+            .edu-video-container {
+                height: 560px; /* Match screen height in the reference image */
+            }
+        }
+        .edu-video-link {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 30;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a73e8; /* google blue */
+            color: #ffffff;
+            width: 3.25rem;
+            height: 3.25rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+        }
+        .edu-video-link:hover {
+            transform: scale(1.1);
+            background-color: #155dfc;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        }
+        .edu-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            width: 100%;
+            position: relative;
+            z-index: 20;
+            margin-top: -3.5rem; /* Matches reference image overlap */
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .edu-cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+        .edu-card {
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 1.25rem; /* Refined padding */
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.06), 0 3px 5px -2px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 120px;
+        }
+        .edu-card-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.35rem;
+            line-height: 1.3;
+        }
+        .edu-card-desc {
+            font-size: 0.75rem;
+            color: #4b5563;
+            line-height: 1.45;
+            font-weight: 300;
+        }
+
+        /* Custom styles for the features section */
+        .edu-features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            width: 100%;
+            margin-top: 2.5rem;
+        }
+        @media (min-width: 640px) {
+            .edu-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .edu-features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .edu-features-card {
+            border-radius: 1.5rem;
+            padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 380px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+        .edu-features-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+        }
+        .edu-features-card-green {
+            background-color: #f4faf7;
+            border: 1px solid rgba(52, 168, 83, 0.12);
+        }
+        .edu-features-card-blue {
+            background-color: #f1f6fe;
+            border: 1px solid rgba(66, 133, 244, 0.12);
+        }
+        .edu-features-card-red {
+            background-color: #fef3f2;
+            border: 1px solid rgba(234, 67, 53, 0.12);
+        }
+        .edu-features-card-yellow {
+            background-color: #fefaf0;
+            border: 1px solid rgba(251, 188, 5, 0.12);
+        }
+        .edu-features-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #202124;
+            line-height: 1.4;
+            text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .edu-features-desc {
+            font-size: 0.85rem;
+            color: #5f6368;
+            line-height: 1.6;
+            text-align: center;
+            font-weight: 300;
+        }
+        .edu-features-btn {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .edu-features-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .edu-features-btn-green {
+            background-color: #137333;
+        }
+        .edu-features-btn-green:hover {
+            background-color: #0f5b28;
+        }
+        .edu-features-btn-blue {
+            background-color: #1a73e8;
+        }
+        .edu-features-btn-blue:hover {
+            background-color: #155dfc;
+        }
+        .edu-features-btn-red {
+            background-color: #c5221f;
+        }
+        .edu-features-btn-red:hover {
+            background-color: #a51b18;
+        }
+        .edu-features-btn-yellow {
+            background-color: #f9ab00;
+        }
+        .edu-features-btn-yellow:hover {
+            background-color: #d69200;
+        }
+
+        /* Custom styles for the Gemini Features Carousel */
+        .gemini-use-tab {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .gemini-use-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -13px; /* Align with border-b of tab container */
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ea4335 0%, #fbbc05 33%, #34a853 66%, #4285f4 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 9999px;
+        }
+        .gemini-use-tab.active {
+            color: #111827 !important; /* Dark text for active */
+        }
+        .gemini-use-tab.active::after {
+            transform: scaleX(1);
+        }
+        .gemini-use-tab.active .tab-icon {
+            stroke: #1a73e8;
+        }
+        .gemini-use-tab .tab-icon {
+            transition: stroke 0.3s ease;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Google Workspace for Education Carousel Styles */
+        .gfe-bg-grey-50 {
+            background-color: #f8f9fa;
+        }
+        .gemini-app-customer-stories-carousel {
+            width: 100%;
+            position: relative;
+        }
+        .gfe-carousel {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .gfe-carousel__wrap {
+            overflow: hidden;
+            width: 100%;
+        }
+        .gfe-carousel__list {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .gfe-carousel__item {
+            flex: 0 0 25%;
+            width: 25%;
+            box-sizing: border-box;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.15;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .gfe-carousel__item.active {
+            opacity: 1;
+        }
+        .gfe-copy-intro {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .gfe-responsive-image {
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+        .gfe-responsive-image__img {
+            max-height: 80px;
+            max-width: 260px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+        .gfe-head-intro__headline {
+            font-family: 'Prompt', var(--font-sans), sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.5;
+            font-weight: 400;
+            color: #202124;
+            margin-bottom: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .gfe-head-intro__headline {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                font-weight: 400;
+            }
+        }
+        .gfe-headline--headline-6 {
+            font-family: 'Prompt', var(--font-sans), sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #5f6368;
+            line-height: 1.5;
+        }
+        
+        /* Pagination Arrows */
+        .gfe-pagination {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            pointer-events: none;
+        }
+        .gfe-pagination--previous {
+            left: -15px;
+        }
+        .gfe-pagination--next {
+            right: -15px;
+        }
+        @media (min-width: 768px) {
+            .gfe-pagination--previous {
+                left: 10px;
+            }
+            .gfe-pagination--next {
+                right: 10px;
+            }
+        }
+        .gfe-pagination__button {
+            background-color: white;
+            border: 1px solid #dadce0;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: all 0.2s ease-in-out;
+            color: #5f6368;
+            pointer-events: auto;
+        }
+        .gfe-pagination__button:hover:not(:disabled) {
+            background-color: #f8f9fa;
+            border-color: #1a73e8;
+            color: #1a73e8;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(26,115,232,0.1);
+        }
+        .gfe-pagination__button:disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+            background-color: #ffffff;
+            border-color: #e8eaed;
+            color: #dadce0;
+        }
+        .gfe-pagination__icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Dots Navigation */
+        .gfe-navigation {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+        .gfe-navigation__list {
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .gfe-navigation__button {
+            text-indent: -9999px;
+            overflow: hidden;
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #dadce0;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            padding: 0;
+            outline: none;
+        }
+        .gfe-navigation__button.active {
+            background-color: #1a73e8;
+            transform: scale(1.45);
+        }
+        .gfe-navigation__button:hover {
+            background-color: #70757a;
+        }
+
+        /* FAQ Accordion Section Custom Styles */
+        .faq-section {
+            background-color: #ffffff;
+            font-family: 'Prompt', var(--font-sans), sans-serif;
+        }
+        .faq-container {
+            max-width: 56rem; /* 896px - max-w-4xl */
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb; /* border-gray-200 */
+            transition: background-color 0.2s ease;
+        }
+        .faq-item:first-of-type {
+            border-top: 1px solid #e5e7eb;
+        }
+        .faq-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 1.75rem;
+            padding-bottom: 1.75rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        .faq-question {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 500;
+            color: #1f2937; /* text-gray-800 */
+            line-height: 1.5;
+            transition: color 0.2s ease;
+        }
+        @media (min-width: 768px) {
+            .faq-question {
+                font-size: 1.25rem; /* text-xl */
+            }
+            .faq-header {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+        .faq-header:hover .faq-question {
+            color: #1a73e8; /* hover text-google-blue */
+        }
+        .faq-toggle-btn {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            background-color: #1a73e8;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background-color 0.25s, transform 0.25s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            border: none;
+            cursor: pointer;
+        }
+        .faq-toggle-btn:hover {
+            background-color: #155dfc;
+            transform: scale(1.05);
+        }
+        .faq-toggle-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            stroke-width: 2.5;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-item.active .faq-toggle-icon {
+            transform: rotate(135deg);
+        }
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+        .faq-content-inner {
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.25s ease-out;
+        }
+        .faq-item.active .faq-content-inner {
+            opacity: 1;
+            padding-bottom: 2rem;
+        }
+    </style>
 </head>
+
 <body class="min-h-screen bg-[#FAFAFA] text-foreground flex flex-col font-sans">
-<div hidden="">
-<!--$--><!--/$-->
-</div>
-<main class="flex min-h-screen flex-col w-full overflow-x-hidden relative">
-<section class="relative overflow-hidden bg-[#FAFBFF] min-h-screen flex flex-col pt-24 pb-16 md:pt-32 md:pb-24 font-prompt">
-<header class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-8 py-3 flex items-center justify-between border-b border-gray-200 bg-white/95 backdrop-blur-sm">
-<div class="flex items-center gap-8">
-<a class="flex items-center pr-4 border-r border-gray-200" href="/"><img src="https://storage.googleapis.com/scurvestorageweb/logo/TheSCurveLogo_New.png" alt="The S Curve" class="h-8 md:h-10 w-auto object-contain"/></a>
-</div>
-<div class="flex items-center gap-3 md:gap-4">
-<a href="tel:0842455451" class="hidden lg:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-scurve-green transition-colors mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4" aria-hidden="true">
-<path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
-</path>
-</svg><span>084-245-5451</span></a><button class="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gemini-purple disabled:pointer-events-none disabled:opacity-50 shadow-sm bg-scurve-green hover:bg-scurve-dark-green text-white rounded-full px-5 py-2 text-sm font-medium h-auto">เริ่มต้นใช้งาน</button>
-</div>
-</header>
-<div class="container mx-auto px-4 md:px-6 relative z-10 flex-1 flex flex-col justify-center">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-stretch max-w-6xl mx-auto w-full">
-<div class="flex flex-col items-start text-left space-y-8 pr-0 md:pr-8 justify-center">
-<div class="flex flex-col items-start gap-4 md:gap-6">
-<img src="https://www.gstatic.com/bricks/image/cdbc45f1-8842-4971-9c77-c9ac4381bb18.png" alt="Gemini Star" class="w-16 h-16 md:w-24 md:h-24 object-contain pointer-events-none" />
-<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-[3.5rem] leading-[1.1]" >
-พลิกโฉมรูปแบบการเรียนการสอนด้วย
-Gemini for Education
-</h1>
-</div>
-<p class="max-w-[42rem] text-gray-600 sm:text-lg leading-relaxed" >
-Gemini เป็นเครื่องมือ Generative AI ที่ช่วยคุณประหยัดเวลา สร้างประสบการณ์การเรียนรู้ที่ปรับให้เหมาะกับแต่ละคน จุดประกายไอเดียใหม่ๆ และช่วยให้เรียนรู้อย่างมั่นใจ ทั้งหมดนี้ทำได้ในสภาพแวดล้อมที่เป็นส่วนตัวและปลอดภัย
-</p>
-<div class="pt-2" >
-<a href="mailto:info@scurvethai.com" class="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gemini-purple disabled:pointer-events-none disabled:opacity-50 shadow-sm h-12 w-full sm:w-auto px-10 rounded-full bg-google-blue hover:bg-blue-700 text-white font-medium text-lg py-6">เริ่มต้นการเดินทางสู่อนาคต</a>
-</div>
-</div>
-<div class="relative w-full flex items-center justify-center bg-transparent" >
-<video src="https://kstatic.googleusercontent.com/files/0521e9d9de0a22af218aa044ecc9faf2bc7d8658a849b91a61232da632508b032c2e12e73a8a3aff91af7769e29f51f349d34c4f5681fbc5f693ca4306a5b420" autoplay loop muted playsinline class="max-w-full max-h-full object-contain drop-shadow-md rounded-xl"></video>
-</div>
-</div>
-</div>
-<div class="absolute inset-0 z-0 bg-gradient-to-br from-white via-[#F4F8FE] to-white opacity-60 pointer-events-none">
-</div>
-</section>
-<footer class="bg-scurve-dark-green py-12 text-gray-300">
-<div class="container mx-auto px-4 md:px-6">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-16">
-<div class="md:col-span-4 lg:col-span-4 flex flex-row items-center space-x-5">
-<img src="https://storage.googleapis.com/scurvestorageweb/logo/The_S_Curve_Logo_2026_White.png" alt="The S Curve" class="h-14 w-auto object-contain shrink-0"/>
-<p class="text-sm italic text-gray-400 leading-relaxed max-w-[200px]">
-Sustaining Professional Growth through Digital Transformation.
-</p>
-</div>
-<div class="md:col-span-5 lg:col-span-5 flex flex-col space-y-4">
-<div class="text-sm leading-relaxed text-gray-400 space-y-4 pt-1">
-<div>
-<p class="font-semibold text-gray-200 mb-1">
-The S Curve Company Limited
-</p>
-<p class="max-w-md">
-6/2, Soi Muban Boonsoong (Vibhavadi Rangsit 46), Vibhavadi Rangsit Road, Lat Yao Sub-district, Chatuchak District, Bangkok. 10900 (Head Office)
-</p>
-</div>
-<div class="flex flex-col space-y-1">
-<p>
-<span class="text-gray-300">โทรศัพท์:</span> <a href="tel:084-245-5451" class="hover:text-white transition-colors">084-245-5451</a>
-</p>
-<p>
-<span class="text-gray-300">อีเมล:</span> <a href="mailto:info@scurvethai.com" class="hover:text-white transition-colors">info@scurvethai.com</a>
-</p>
-</div>
-</div>
-</div>
-<div class="md:col-span-3 lg:col-span-3 flex flex-col space-y-4">
-<h4 class="text-white font-semibold text-sm tracking-wider uppercase">
-ลิงก์ด่วน
-</h4>
-<div class="flex flex-col space-y-3">
-<a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">นโยบายความเป็นส่วนตัว</a><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">ข้อกำหนดการให้บริการ</a><a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">ติดต่อเรา</a>
-</div>
-</div>
-</div>
-<div class="border-t border-white/10 pt-8 text-sm flex flex-col md:flex-row justify-between items-center">
-<p>
-© 2026 The S Curve. All rights reserved.
-</p>
-<div class="mt-4 md:mt-0">
-Authorized Google Workspace Partner
-</div>
-</div>
-</div>
-</footer></main><!--$--><!--/$-->
+    <div hidden="">
+        <!--$--><!--/$-->
+    </div>
+    <main class="flex min-h-screen flex-col w-full overflow-x-hidden relative">
+        <section
+            class="relative overflow-hidden bg-[#FAFBFF] min-h-screen flex flex-col pt-24 pb-16 md:pt-32 md:pb-24 font-prompt">
+            <header
+                class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-8 py-3 flex items-center justify-between border-b border-gray-200 bg-white/95 backdrop-blur-sm">
+                <div class="flex items-center gap-8">
+                    <a class="flex items-center pr-4 border-r border-gray-200" href="/"><img
+                            src="https://storage.googleapis.com/scurvestorageweb/logo/TheSCurveLogo_New.png"
+                            alt="The S Curve" class="h-8 md:h-10 w-auto object-contain" /></a>
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-sm font-medium transition-all duration-300 relative py-2 text-scurve-green"
+                            href="/#overview">ภาพรวม<div
+                                class="absolute bottom-[-14px] left-0 right-0 h-1 bg-scurve-green rounded-t-md"></div>
+                            </a>
+                        <a class="text-sm font-medium transition-all duration-300 relative py-2 text-gray-500 hover:text-scurve-green"
+                            href="/agents">เอเจนท์</a>
+                        <a class="text-sm font-medium transition-all duration-300 relative py-2 text-gray-500 hover:text-scurve-green"
+                            href="/resources">แหล่งข้อมูล</a>
+                        <a class="text-sm font-medium transition-all duration-300 relative py-2 text-gray-500 hover:text-scurve-green"
+                            href="/#contact">ติดต่อฝ่ายขาย</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-3 md:gap-4">
+                    <a href="tel:0842455451"
+                        class="hidden lg:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-scurve-green transition-colors mr-2"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-phone h-4 w-4" aria-hidden="true">
+                            <path
+                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                            </path>
+                        </svg><span>084-245-5451</span></a><button
+                        class="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gemini-purple disabled:pointer-events-none disabled:opacity-50 shadow-sm bg-scurve-green hover:bg-scurve-dark-green text-white rounded-full px-5 py-2 text-sm font-medium h-auto">เริ่มต้นใช้งาน</button>
+                </div>
+            </header>
+            <div class="container mx-auto px-4 md:px-6 relative z-10 flex-1 flex flex-col justify-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-stretch max-w-6xl mx-auto w-full">
+                    <div class="flex flex-col items-start text-left space-y-8 pr-0 md:pr-8 justify-center">
+                        <div class="flex flex-col items-start gap-4 md:gap-6">
+                            <img src="https://www.gstatic.com/bricks/image/cdbc45f1-8842-4971-9c77-c9ac4381bb18.png"
+                                alt="Gemini Star"
+                                class="w-16 h-16 md:w-24 md:h-24 object-contain pointer-events-none" />
+                            <h1
+                                class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-[3.5rem] leading-[1.1]">
+                                พลิกโฉมรูปแบบการเรียนการสอนด้วย
+                                Gemini for Education
+                            </h1>
+                        </div>
+                        <p class="max-w-[42rem] text-gray-600 sm:text-lg leading-relaxed">
+                            Gemini เป็นเครื่องมือ Generative AI ที่ช่วยคุณประหยัดเวลา
+                            สร้างประสบการณ์การเรียนรู้ที่ปรับให้เหมาะกับแต่ละคน จุดประกายไอเดียใหม่ๆ
+                            และช่วยให้เรียนรู้อย่างมั่นใจ ทั้งหมดนี้ทำได้ในสภาพแวดล้อมที่เป็นส่วนตัวและปลอดภัย
+                        </p>
+                        <div class="pt-2">
+                            <a href="mailto:info@scurvethai.com"
+                                class="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gemini-purple disabled:pointer-events-none disabled:opacity-50 shadow-sm h-12 w-full sm:w-auto px-10 rounded-full bg-google-blue hover:bg-blue-700 text-white font-medium text-lg py-6">เริ่มต้นการเดินทางสู่อนาคต</a>
+                        </div>
+                    </div>
+                    <div class="relative w-full flex items-center justify-center bg-transparent">
+                        <video
+                            src="https://kstatic.googleusercontent.com/files/0521e9d9de0a22af218aa044ecc9faf2bc7d8658a849b91a61232da632508b032c2e12e73a8a3aff91af7769e29f51f349d34c4f5681fbc5f693ca4306a5b420"
+                            autoplay loop muted playsinline
+                            class="max-w-full max-h-full object-contain drop-shadow-md rounded-xl"></video>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute inset-0 z-0 bg-gradient-to-br from-white via-[#F4F8FE] to-white opacity-60 pointer-events-none">
+            </div>
+        </section>
+
+        <section class="py-24 bg-white font-prompt overflow-hidden border-t border-gray-100">
+            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                        <span class="text-google-blue">Gemini</span> เป็นผู้ช่วย AI เพื่อการศึกษา
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        นักการศึกษา นักเรียนนักศึกษา และเจ้าหน้าที่สามารถใช้ Gemini เพื่อเริ่มวางแผนการสอน ระดมความคิดและหาไอเดียใหม่ๆ รวมถึงเรียนรู้ได้อย่างมั่นใจ
+                    </p>
+                </div>
+
+                <div class="flex justify-center items-center gap-4 mb-12">
+                    <button id="edu-btn-teach" onclick="switchEducationTab('teach')" class="edu-tab-btn px-8 py-3 rounded-full font-prompt font-semibold transition-all duration-300 border-2 border-google-blue bg-blue-50 text-google-blue shadow-sm">
+                        สอน
+                    </button>
+                    <button id="edu-btn-learn" onclick="switchEducationTab('learn')" class="edu-tab-btn px-8 py-3 rounded-full font-prompt font-semibold transition-all duration-300 border border-gray-200 bg-white text-gray-600 hover:border-google-blue hover:text-google-blue">
+                        เรียนรู้
+                    </button>
+                    <button id="edu-btn-work" onclick="switchEducationTab('work')" class="edu-tab-btn px-8 py-3 rounded-full font-prompt font-semibold transition-all duration-300 border border-gray-200 bg-white text-gray-600 hover:border-google-blue hover:text-google-blue">
+                        ทำงาน
+                    </button>
+                </div>
+
+                <div class="relative">
+                    <!-- Tab 1: Teach (สอน) -->
+                    <div id="edu-tab-teach" class="edu-tab-content flex flex-col w-full relative">
+                        <!-- Layer 1: Video/Image Background Container -->
+                        <div class="edu-video-container">
+                            <!-- Background Video -->
+                            <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="https://kstatic.googleusercontent.com/files/3244684f57a117c9c6f0fb92e1adc4fa815e6fd7a9be51d65093dd57f6ce55778de8f8b55e7605372ffb6a8e64a43e5a4a4b1123f5d83540e737d71398874797" type="video/mp4">
+                            </video>
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent z-10"></div>
+                        </div>
+                        
+                        <!-- Layer 2: Text Cards Container (Overlapping the bottom) -->
+                        <div class="edu-cards-grid">
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">วางแผนบทเรียนได้เร็วขึ้น</h3>
+                                    <p class="edu-card-desc">
+                                        สร้างแผนการสอนให้สอดคล้องกับวัตถุประสงค์การเรียนรู้และมาตรฐานด้านการศึกษาได้อย่างรวดเร็ว พร้อมรับไอเดียใหม่ๆ สำหรับวิธีสนุกๆ ในการทำให้บทเรียนน่าสนใจยิ่งขึ้น
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">ปรับเนื้อหาของหลักสูตรให้เหมาะกับนักเรียนนักศึกษาแต่ละคน</h3>
+                                    <p class="edu-card-desc">
+                                        ปรับระดับความยากของเนื้อหาและโจทย์งาน ตลอดจนเพิ่มการมีส่วนร่วมของนักเรียนนักศึกษาด้วยการปรับเนื้อหาให้ตรงกับความสนใจ
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">สร้างแบบประเมินและสื่อสำหรับฝึกหัด</h3>
+                                    <p class="edu-card-desc">
+                                        สร้างข้อสอบ แบบทดสอบ งาน และเกณฑ์การให้คะแนนใหม่ตั้งแต่ต้นหรือปรับตามตัวอย่างที่มีอยู่ก่อนหน้านี้ พร้อมกับเฉลยคำตอบที่เกี่ยวข้อง และสร้างสื่อสำหรับฝึกหัดที่ปรับให้เหมาะกับความต้องการของนักเรียนนักศึกษาแต่ละคน
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Learn (เรียนรู้) -->
+                    <div id="edu-tab-learn" class="edu-tab-content hidden flex-col w-full relative">
+                        <!-- Layer 1: Video/Image Background Container -->
+                        <div class="edu-video-container">
+                            <!-- Background Video -->
+                            <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="https://kstatic.googleusercontent.com/files/808910d239268944250242dc2fd43f3f73e11aeebba083f50fd467c6b190e6cbd22f4114f6d5f1d8815d1633fe9f9329ce6ffe3b69c8b4a387f84cd55baa7ac8" type="video/mp4">
+                            </video>
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent z-10"></div>
+                        </div>
+                        
+                        <!-- Layer 2: Text Cards Container -->
+                        <div class="edu-cards-grid">
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">สร้างความเข้าใจที่ลึกซึ้ง</h3>
+                                    <p class="edu-card-desc">
+                                        รับความช่วยเหลือแบบออนดีมานด์ ซึ่งมีคำอธิบายแนวคิดที่เข้าใจยากและการแนะนำทีละขั้นตอน เพื่อส่งเสริมการเรียนรู้ด้วยตนเองอย่างต่อเนื่อง
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">เตรียมตัวสอบ</h3>
+                                    <p class="edu-card-desc">
+                                        สร้างแบบทดสอบฝึกหัดหรือแบบทดสอบที่ปรับให้เหมาะกับคุณโดยใช้เอกสาร ไฟล์บทเรียน หรือเอกสารอ้างอิงของตนเองเป็นแหล่งวิเคราะห์ข้อมูลเชิงลึก
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">ข้อคิดเห็นเกี่ยวกับการเขียน</h3>
+                                    <p class="edu-card-desc">
+                                        ช่วยตรวจโครงสร้างงานเขียน การใช้ถ้อยคำ ไวยากรณ์ และให้คำแนะนำในจุดที่ควรแก้ไขเพื่อปรับปรุงงานเขียนและรายงานวิชาการให้ดียิ่งขึ้น
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Work (ทำงาน) -->
+                    <div id="edu-tab-work" class="edu-tab-content hidden flex-col w-full relative">
+                        <!-- Layer 1: Video/Image Background Container -->
+                        <div class="edu-video-container">
+                            <!-- Background Video -->
+                            <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline poster>
+                                <source src="https://kstatic.googleusercontent.com/files/5823b9f6b064e59f447b85e124ee0024d70d70f49667c0a3dab9e6579b565c4197a438cf949a6f98cabef0d1fb45073105e3cd4c0f9abd5b604cc8bc6f9869dc" type="video/mp4">
+                            </video>
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent z-10"></div>
+                        </div>
+                        
+                        <!-- Layer 2: Text Cards Container -->
+                        <div class="edu-cards-grid">
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">ประหยัดเวลาในการสื่อสาร</h3>
+                                    <p class="edu-card-desc">
+                                        เริ่มจากหน้าว่างๆ แล้วต่อยอดเป็นแบบเสนอขอรับทุน เทมเพลตจดหมายติดต่อศิษย์เก่า จดหมายข่าว จดหมายแนะนำ หรืออีเมลถึงผู้ปกครอง และอื่นๆ
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">เพิ่มประสิทธิภาพงานด้านการดูแลระบบ</h3>
+                                    <p class="edu-card-desc">
+                                        สรุปเอกสารยาวๆ วิเคราะห์ข้อมูล รวมถึงสร้างเทมเพลตสำหรับเสนอของบประมาณ ใบขออนุญาต และอื่นๆ อีกมากมาย
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div>
+                                    <h3 class="edu-card-title">เพิ่มประสิทธิภาพการวิจัย</h3>
+                                    <p class="edu-card-desc">
+                                        ลดความยุ่งยากในการทบทวนวรรณกรรมโดยให้ AI ช่วยสรุปเอกสารและระบุผลการศึกษาที่สำคัญอย่างรวดเร็ว ปรับแต่งไอเดียการวิจัยและเพิ่มประสิทธิภาพการเขียนด้วยคำแนะนำในการร่างและการปรับให้ชัดเจน
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function switchEducationTab(tabName) {
+                // hide all tab contents
+                document.querySelectorAll('.edu-tab-content').forEach(el => {
+                    el.classList.add('hidden');
+                    el.classList.remove('flex');
+                });
+                // show selected tab content
+                const activeTab = document.getElementById('edu-tab-' + tabName);
+                activeTab.classList.remove('hidden');
+                activeTab.classList.add('flex');
+                
+                // update button styles
+                document.querySelectorAll('.edu-tab-btn').forEach(btn => {
+                    btn.className = "edu-tab-btn px-8 py-3 rounded-full font-prompt font-semibold transition-all duration-300 border border-gray-200 bg-white text-gray-600 hover:border-google-blue hover:text-google-blue";
+                });
+                document.getElementById('edu-btn-' + tabName).className = "edu-tab-btn px-8 py-3 rounded-full font-prompt font-semibold transition-all duration-300 border-2 border-google-blue bg-blue-50 text-google-blue shadow-sm";
+            }
+        </script>
+
+        <section class="py-24 bg-white font-prompt border-t border-gray-100">
+            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                        สร้างมาเพื่อการเรียนการสอนโดยเฉพาะ
+                    </h2>
+                </div>
+
+                <div class="edu-features-grid">
+                    <!-- Card 1: ประสบการณ์การใช้งานอย่างมีความรับผิดชอบสำหรับนักเรียนนักศึกษา -->
+                    <div class="edu-features-card edu-features-card-green">
+                        <div class="flex-1 flex flex-col items-center">
+                            <!-- Icon -->
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 36V52L32 46L42 52V36" fill="#34A853" opacity="0.8"/>
+                                <path d="M27 36V48L32 45L37 48V36" fill="#1B5E20"/>
+                                <circle cx="32" cy="28" r="20" fill="#34A853"/>
+                                <circle cx="32" cy="28" r="16" fill="#1B5E20" opacity="0.1"/>
+                                <path d="M32 16.5L35.6 23.8L43.6 25L37.8 30.6L39.2 38.5L32 34.8L24.8 38.5L26.2 30.6L20.4 25L28.4 23.8L32 16.5Z" fill="#FFFFFF"/>
+                            </svg>
+                            <!-- Title -->
+                            <h3 class="edu-features-title">
+                                ประสบการณ์การใช้งานอย่างมีความรับผิดชอบสำหรับนักเรียนนักศึกษา
+                            </h3>
+                            <!-- Description -->
+                            <p class="edu-features-desc">
+                                นักเรียนนักศึกษาที่มีอายุต่ำกว่า 18 ปี จะได้รับประสบการณ์การใช้งานผลิตภัณฑ์ที่แตกต่างออกไป พร้อมด้วยการจำกัดขอบเขตเพิ่มเติมและแหล่งข้อมูลด้านการรู้เท่าทัน AI
+                            </p>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <button class="edu-features-btn edu-features-btn-green">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: เป็นส่วนตัวและปลอดภัย -->
+                    <div class="edu-features-card edu-features-card-blue">
+                        <div class="flex-1 flex flex-col items-center">
+                            <!-- Icon -->
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 6C32 6 48 10 48 24C48 38 32 58 32 58C32 58 16 38 16 24C16 10 32 6 32 6Z" fill="#4285F4"/>
+                                <path d="M32 16C27.58 16 24 19.58 24 24C24 28.42 27.58 32 32 32C36.42 32 38.5 29.5 39 27.5H32V24.5H42.2C42.4 25.4 42.5 26.2 42.5 27.2C42.5 33.5 38.3 38 32 38C24.27 38 18 31.73 18 24C18 16.27 24.27 10 32 10C35.77 10 38.93 11.38 41.34 13.66L37.1 17.9C35.72 16.58 34.02 16 32 16Z" fill="#FFFFFF"/>
+                            </svg>
+                            <!-- Title -->
+                            <h3 class="edu-features-title">
+                                เป็นส่วนตัวและปลอดภัย
+                            </h3>
+                            <!-- Description -->
+                            <p class="edu-features-desc">
+                                ข้อมูลของคุณจะไม่ได้รับการตรวจสอบจากเจ้าหน้าที่หรือนำไปใช้ฝึกโมเดล AI
+                            </p>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <button class="edu-features-btn edu-features-btn-blue">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: ตั้งอยู่บนรากฐานของวิทยาศาสตร์การเรียนรู้ -->
+                    <div class="edu-features-card edu-features-card-red">
+                        <div class="flex-1 flex flex-col items-center">
+                            <!-- Icon -->
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 12L56 22L32 32L8 22L32 12Z" fill="#EA4335"/>
+                                <path d="M18 27.5V36C18 41 24.27 44 32 44C39.73 44 46 41 46 36V27.5L32 33.5L18 27.5Z" fill="#C5221F"/>
+                                <path d="M46 24V34L49 37V34" stroke="#EA4335" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M50 10L51.5 13.5L55 15L51.5 16.5L50 20L48.5 16.5L45 15L48.5 13.5L50 10Z" fill="#EA4335" opacity="0.8"/>
+                                <path d="M12 12L13 14.5L15.5 15.5L13 16.5L12 19L11 16.5L8.5 15.5L11 14.5L12 12Z" fill="#EA4335" opacity="0.6"/>
+                            </svg>
+                            <!-- Title -->
+                            <h3 class="edu-features-title">
+                                ตั้งอยู่บนรากฐานของวิทยาศาสตร์การเรียนรู้
+                            </h3>
+                            <!-- Description -->
+                            <p class="edu-features-desc">
+                                Gemini 2.5 Pro รวม LearnLM เข้าไว้ด้วย จึงทำให้เป็นโมเดลชั้นนำของโลกสำหรับการเรียนรู้*
+                            </p>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <button class="edu-features-btn edu-features-btn-red">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: ไม่มีค่าใช้จ่าย -->
+                    <div class="edu-features-card edu-features-card-yellow">
+                        <div class="flex-1 flex flex-col items-center">
+                            <!-- Icon -->
+                            <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="28" cy="28" r="20" fill="#FBBC05"/>
+                                <path d="M28 15V41M23.5 34.5C23.5 31.5 26 29.5 28 29.5C31.5 29.5 32.5 32 32.5 34.5C32.5 37 31 38.5 28 39C24.5 39.5 23.5 37 23.5 34.5M32.5 21.5C32.5 24.5 30 26.5 28 26.5C24.5 26.5 23.5 24 23.5 21.5C23.5 19 25 17.5 28 17M28 17C31.5 16.5 32.5 19 32.5 21.5" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="45" cy="45" r="9" fill="#FBBC05"/>
+                                <circle cx="45" cy="45" r="8" fill="#F9A825"/>
+                                <path d="M41.5 45L44 47.5L48.5 42" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <!-- Title -->
+                            <h3 class="edu-features-title">
+                                ไม่มีค่าใช้จ่าย
+                            </h3>
+                            <!-- Description -->
+                            <p class="edu-features-desc">
+                                Gemini ให้บริการแบบไม่มีค่าใช้จ่าย จึงทำให้นักการศึกษาและนักเรียนนักศึกษาทั่วโลกเข้าถึงได้มากขึ้น
+                            </p>
+                        </div>
+                        <div class="mt-6 flex justify-end">
+                            <button class="edu-features-btn edu-features-btn-yellow">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: ดูว่าคุณใช้ Gemini ทำอะไรได้บ้าง -->
+        <section class="py-24 bg-[#FAFAFA] font-prompt overflow-hidden border-t border-gray-100">
+            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+                <!-- Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                        ดูว่าคุณใช้ <span class="text-google-blue font-semibold">Gemini</span> ทำอะไรได้บ้าง
+                    </h2>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <div class="relative mb-16 border-b border-gray-200">
+                    <!-- Tabs Wrapper -->
+                    <div class="flex flex-nowrap md:flex-wrap overflow-x-auto md:overflow-x-visible -mx-4 px-4 md:mx-0 md:px-0 justify-start md:justify-center items-center gap-2 md:gap-8 pb-3 scrollbar-hide">
+                        
+                        <!-- Tab 1 -->
+                        <button onclick="switchGeminiUseTab(0)" id="gemini-tab-0" class="gemini-use-tab active flex items-center gap-2.5 px-3 py-3 text-sm md:text-base font-semibold text-gray-500 hover:text-google-blue whitespace-nowrap transition-all duration-300 relative">
+                            <svg class="w-5 h-5 tab-icon stroke-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <span>ประหยัดเวลาหลายชั่วโมงในการค้นคว้าข้อมูล</span>
+                        </button>
+
+                        <!-- Tab 2 -->
+                        <button onclick="switchGeminiUseTab(1)" id="gemini-tab-1" class="gemini-use-tab flex items-center gap-2.5 px-3 py-3 text-sm md:text-base font-semibold text-gray-500 hover:text-google-blue whitespace-nowrap transition-all duration-300 relative">
+                            <svg class="w-5 h-5 tab-icon stroke-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"></path>
+                                <path d="M19 10v1a7 7 0 0 1-14 0v-1"></path>
+                                <line x1="12" y1="18" x2="12" y2="22"></line>
+                            </svg>
+                            <span>สร้างผู้เชี่ยวชาญ AI แบบกำหนดเอง</span>
+                        </button>
+
+                        <!-- Tab 3 -->
+                        <button onclick="switchGeminiUseTab(2)" id="gemini-tab-2" class="gemini-use-tab flex items-center gap-2.5 px-3 py-3 text-sm md:text-base font-semibold text-gray-500 hover:text-google-blue whitespace-nowrap transition-all duration-300 relative">
+                            <svg class="w-5 h-5 tab-icon stroke-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                            <span>เขียน สร้างโค้ด และสร้างสรรค์ผลงาน</span>
+                        </button>
+
+                        <!-- Tab 4 -->
+                        <button onclick="switchGeminiUseTab(3)" id="gemini-tab-3" class="gemini-use-tab flex items-center gap-2.5 px-3 py-3 text-sm md:text-base font-semibold text-gray-500 hover:text-google-blue whitespace-nowrap transition-all duration-300 relative">
+                            <svg class="w-5 h-5 tab-icon stroke-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                            <span>เรียนรู้ได้ทุกที่ทุกเวลา</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="relative bg-white rounded-[2.5rem] border border-gray-100 p-8 md:p-16 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
+                    
+                    <!-- Slide Wrapper -->
+                    <div id="gemini-carousel-slides" class="relative min-h-[380px] flex items-center">
+                        
+                        <!-- Navigation Arrows -->
+                        <button onclick="prevGeminiSlide()" class="absolute left-0 md:left-2 z-20 w-11 h-11 rounded-full border border-gray-150 bg-white shadow-md flex items-center justify-center text-gray-500 hover:text-google-blue hover:border-google-blue hover:scale-105 transition-all duration-200 focus:outline-none">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                            </svg>
+                        </button>
+
+                        <button onclick="nextGeminiSlide()" class="absolute right-0 md:right-2 z-20 w-11 h-11 rounded-full border border-gray-150 bg-white shadow-md flex items-center justify-center text-gray-500 hover:text-google-blue hover:border-google-blue hover:scale-105 transition-all duration-200 focus:outline-none">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Dynamic Slide Content -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full px-12 md:px-16 transition-opacity duration-300" id="gemini-active-slide">
+                            <!-- Left: Image Showcase -->
+                            <div class="flex justify-center items-center relative rounded-3xl overflow-hidden shadow-sm bg-black aspect-[4/3] w-full max-w-[480px] mx-auto">
+                                <img src="/image/deep_research.png" id="gemini-slide-img" alt="Gemini Feature Mockup" class="w-full h-full object-cover">
+                            </div>
+                            
+                            <!-- Right: Information content -->
+                            <div class="flex flex-col items-start text-left space-y-6 lg:pl-4">
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight" id="gemini-slide-title">Deep Research</h3>
+                                <p class="text-base md:text-lg text-gray-500 leading-relaxed font-light" id="gemini-slide-desc">
+                                    รับรายงานแบบละเอียดพร้อมการอ้างอิงเกี่ยวกับทุกหัวข้อในไม่กี่นาที และถามคำถามติดตามผลเพื่อให้ได้ข้อมูลเชิงลึกที่ถูกต้องยิ่งขึ้น
+                                </p>
+                                <a href="https://gemini.google.com" id="gemini-slide-btn" target="_blank" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-google-blue hover:bg-blue-700 text-white font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02] text-sm md:text-base">
+                                    ลองใช้ Deep Research
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Autoplay Play/Pause Button -->
+                    <div class="mt-8 flex justify-center items-center">
+                        <button onclick="toggleGeminiAutoPlay()" id="gemini-autoplay-btn" class="w-9 h-9 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:text-google-blue hover:border-google-blue transition-all duration-200 shadow-sm focus:outline-none">
+                            <!-- Pause Icon -->
+                            <svg id="autoplay-pause-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                            </svg>
+                            <!-- Play Icon -->
+                            <svg id="autoplay-play-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: สถาบันการศึกษาใช้ Gemini เพื่อพลิกโฉมรูปแบบการเรียนการสอน (Google Official Layout) -->
+        <section class="gfe-section gfe-page gemini-for-education-gemini-app-customer-stories-carousel gfe-page--rounded-background-color gfe-bg-grey-50 gfe-page--narrow gfe-mod-spacer-5-top gfe-mod-padding-5-top gfe-mod-padding-5-bottom font-prompt" id="gemini-app-customer-stories-carousel" data-ga4="{&quot;module_impression&quot;: {&quot;event&quot;: &quot;module_impression&quot;, &quot;module_name&quot;: &quot;Gemini app | Customer stories | Carousel&quot;, &quot;section_header&quot;: &quot;&quot;}}" data-ga4-loaded="true">
+            <!-- Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    สถาบันการศึกษาใช้ <span class="text-google-blue font-semibold">Gemini</span> เพื่อพลิกโฉมรูปแบบการเรียนการสอน
+                </h2>
+            </div>
+            
+            <div class="gemini-app-customer-stories-carousel-geag-testimonials relative max-w-6xl mx-auto">
+                <div class="glue-carousel gfe-carousel gfe-carousel--carousel-geag-testimonials gfe-carousel--snap-to-grid-xl gfe-carousel--span-1-xl gfe-carousel--span-1-lg gfe-carousel--span-1-md gfe-carousel--span-1-sm gfe-carousel--narrow gfe-carousel--vertical-center glue-is-ready" data-glue-pagination="carousel-geag-testimonials" data-glue-carousel-breakpoints="sm,md,lg,xl" data-glue-carousel-cyclical="false" data-glue-carousel-autoplay="false" data-g-section="GEAG | Testimonials" data-g-action="carousel move">
+                    
+                    <!-- Left Arrow Button -->
+                    <div class="gfe-pagination gfe-pagination--previous">
+                        <button type="button" onclick="prevTestimonial()" id="testimonial-prev-btn" class="gfe-pagination__button glue-pagination__button" aria-label="ก่อนหน้า" title="ก่อนหน้า">
+                            <svg role="img" aria-hidden="true" class="gfe-icon gfe-icon--24px gfe-pagination__icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Right Arrow Button -->
+                    <div class="gfe-pagination gfe-pagination--next">
+                        <button type="button" onclick="nextTestimonial()" id="testimonial-next-btn" class="gfe-pagination__button glue-pagination__button" aria-label="ถัดไป" title="ถัดไป">
+                            <svg role="img" aria-hidden="true" class="gfe-icon gfe-icon--24px gfe-pagination__icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="gfe-carousel__wrap glue-carousel__wrap">
+                        <ul class="gfe-no-bullet gfe-carousel__list glue-carousel__list" id="testimonial-carousel-list" role="tablist" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; width: 400%; transform: translate3d(0%, 0px, 0px);">
+                            
+                            <!-- Slide 1 -->
+                            <li role="tab" id="carousel-geag-testimonials-1" class="gfe-carousel__item glue-carousel__item active" style="min-height: 423px;">
+                                <div class="gfe-component-classroom-testimonial-case-10">
+                                    <div class="gfe-copy-intro gfe-mod-text-center">
+                                        <picture class="gfe-responsive-image gfe-responsive-image--custom-size" style="display: inline-block;">
+                                            <svg class="gfe-responsive-image__img gfe-responsive-image__img--no-border mx-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="100" width="100" style="--max-width: 100px;">
+                                                <circle cx="50" cy="50" r="46" fill="#14346B" />
+                                                <circle cx="50" cy="50" r="40" fill="#E8B01C" />
+                                                <circle cx="50" cy="50" r="37" fill="#14346B" />
+                                                <path d="M47 25h6v50h-6z M25 47h50v6h-50z" fill="#FFFFFF" />
+                                                <path d="M50 20 L44 26 H56 Z M50 80 L44 74 H56 Z M20 50 L26 44 V56 Z M80 50 L74 44 V56 Z" fill="#FFFFFF" stroke="#E8B01C" stroke-width="1.5" />
+                                                <polygon points="40,40 60,40 60,52 50,62 40,52" fill="#E8B01C" stroke="#FFFFFF" stroke-width="1" />
+                                                <circle cx="50" cy="49" r="4" fill="#14346B" />
+                                                <path d="M50 42v14M43 49h14M45 44l10 10M45 54l10-10" stroke="#14346B" stroke-width="1" />
+                                            </svg>
+                                        </picture>
+                                        <div class="gfe-head-intro gfe-mod-spacer-4-top">
+                                            <h3 class="gfe-headline gfe-headline--headline-4 gfe-head-intro__headline">"การทำให้ Google Gemini เข้าถึงได้สำหรับนักการศึกษา นักเรียนนักศึกษา และเจ้าหน้าที่ แสดงให้เห็นว่า UST ใช้ประโยชน์จากพลังของเทคโนโลยีอย่างเต็มที่ ยอมรับแนวโน้ม ความสามารถ และนวัตกรรมใหม่ๆ อย่างกระตือรือร้น พร้อมทั้งรับประกันการใช้งานอย่างมีจริยธรรมและมีความรับผิดชอบ ความปลอดภัยทางดิจิทัล และความพร้อมสำหรับอนาคต โดยมีหลักการของการพูดคุย ความยืดหยุ่น และความสามารถเข้าถึงได้ง่ายเป็นแนวทาง"</h3>
+                                        </div>
+                                        <p class="gfe-body gfe-mod-spacer-2-top">
+                                            <span class="gfe-headline gfe-headline--headline-6">Cheryl R. Peralta รองอธิการบดีฝ่ายวิชาการของมหาวิทยาลัย Santo Tomas</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Slide 2 -->
+                            <li role="tab" id="carousel-geag-testimonials-2" class="gfe-carousel__item glue-carousel__item" aria-hidden="true" style="min-height: 423px;">
+                                <div class="gfe-component-classroom-testimonial-case-11">
+                                    <div class="gfe-copy-intro gfe-mod-text-center">
+                                        <picture class="gfe-responsive-image gfe-responsive-image--custom-size" style="display: inline-block;">
+                                            <svg class="gfe-responsive-image__img gfe-responsive-image__img--no-border mx-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="100" width="100" style="--max-width: 100px;">
+                                                <circle cx="50" cy="50" r="46" fill="#1C457A" />
+                                                <circle cx="50" cy="50" r="43" stroke="#FFFFFF" stroke-width="2" />
+                                                <circle cx="50" cy="38" r="14" stroke="#FFFFFF" stroke-width="5" fill="none" />
+                                                <circle cx="61" cy="47" r="14" stroke="#FFFFFF" stroke-width="5" fill="none" />
+                                                <circle cx="57" cy="61" r="14" stroke="#FFFFFF" stroke-width="5" fill="none" />
+                                                <circle cx="43" cy="61" r="14" stroke="#FFFFFF" stroke-width="5" fill="none" />
+                                                <circle cx="39" cy="47" r="14" stroke="#FFFFFF" stroke-width="5" fill="none" />
+                                            </svg>
+                                        </picture>
+                                        <div class="gfe-head-intro gfe-mod-spacer-4-top">
+                                            <h3 class="gfe-headline gfe-headline--headline-4 gfe-head-intro__headline">"Gemini ช่วยให้เราสามารถดำเนินการประเมินที่ยุติธรรมและปรับเปลี่ยนในแบบของแต่ละคนได้ในเวลาที่สั้นลง เราสามารถให้ความคิดเห็นที่เพียงพอและเหมาะสมซึ่งปรับให้เหมาะกับนักเรียนแต่ละคนได้ ในขณะเดียวกันก็ประหยัดเวลาได้มากกว่า 30% เมื่อเทียบกับวิธีการแบบเดิม"</h3>
+                                        </div>
+                                        <p class="gfe-body gfe-mod-spacer-2-top">
+                                            <span class="gfe-headline gfe-headline--headline-6">Hiroki Toriu ครูโรงเรียนและมหาวิทยาลัย Kinki University Hiroshima High School and Junior High School เมืองฟุกุยามะ</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Slide 3 -->
+                            <li role="tab" id="carousel-geag-testimonials-3" class="gfe-carousel__item glue-carousel__item" aria-hidden="true" style="min-height: 423px;">
+                                <div class="gfe-component-classroom-testimonial-case-12">
+                                    <div class="gfe-copy-intro gfe-mod-text-center">
+                                        <picture class="gfe-responsive-image gfe-responsive-image--custom-size" style="display: inline-block;">
+                                            <source media="(max-width: 599px)" sizes="100vw" srcset="https://lh3.googleusercontent.com/g1GmG2tQ-h9sG5KSXWnJXgCWLcJpUmg3YM8D2EAsPKzDHayp0qsSnmoosWaqblqNzt2dv-oyYJ-6KNyF269sCiwxgOD8ZCRhPhW0Qtz5bGDdxVoCSUQ=w200-v1-e30 1x, https://lh3.googleusercontent.com/g1GmG2tQ-h9sG5KSXWnJXgCWLcJpUmg3YM8D2EAsPKzDHayp0qsSnmoosWaqblqNzt2dv-oyYJ-6KNyF269sCiwxgOD8ZCRhPhW0Qtz5bGDdxVoCSUQ=w300-v1-e30 2x">
+                                            <source media="(min-width: 600px) and (max-width: 1023px)" sizes="100vw" srcset="https://lh3.googleusercontent.com/g1GmG2tQ-h9sG5KSXWnJXgCWLcJpUmg3YM8D2EAsPKzDHayp0qsSnmoosWaqblqNzt2dv-oyYJ-6KNyF269sCiwxgOD8ZCRhPhW0Qtz5bGDdxVoCSUQ=w200-v1-e30 1x, https://lh3.googleusercontent.com/g1GmG2tQ-h9sG5KSXWnJXgCWLcJpUmg3YM8D2EAsPKzDHayp0qsSnmoosWaqblqNzt2dv-oyYJ-6KNyF269sCiwxgOD8ZCRhPhW0Qtz5bGDdxVoCSUQ=w300-v1-e30 2x">
+                                            <source media="(min-width: 1024px)" sizes="100vw" srcset="https://lh3.googleusercontent.com/g1GmG2tQ-h9sG5KSXWnJXgCWLcJpUmg3YM8D2EAsPKzDHayp0qsSnmoosWaqblqNzt2dv-oyYJ-6KNyF269sCiwxgOD8ZCRhPhW0Qtz5bGDdxVoCSUQ=w200-v1-e30 1x, https://lh3.googleusercontent.com/g1GmG2tQ-h9sG5KSXWnJXgCWLcJpUmg3YM8D2EAsPKzDHayp0qsSnmoosWaqblqNzt2dv-oyYJ-6KNyF269sCiwxgOD8ZCRhPhW0Qtz5bGDdxVoCSUQ=w300-v1-e30 2x">
+                                            <img loading="eager" class="gfe-responsive-image__img gfe-responsive-image__img--no-border mx-auto" src="https://lh3.googleusercontent.com/g1GmG2tQ-h9sG5KSXWnJXgCWLcJpUmg3YM8D2EAsPKzDHayp0qsSnmoosWaqblqNzt2dv-oyYJ-6KNyF269sCiwxgOD8ZCRhPhW0Qtz5bGDdxVoCSUQ=w200-v1-e30" alt="" height="100" width="100" style="--max-width: 100px;">
+                                        </picture>
+                                        <div class="gfe-head-intro gfe-mod-spacer-4-top">
+                                            <h3 data-text="“We’re going back to the glory days where teaching is not a desk job, it’s a people job. And I think that’s a major benefit of Gemini.”" class="gfe-headline gfe-headline--headline-4 gfe-head-intro__headline">"เรากำลังกลับไปสู่ยุคที่การสอนไม่ใช่แค่งานที่ต้องนั่งทำที่โต๊ะ แต่เป็นงานที่ต้องพบปะผู้คน และเราคิดว่านี่คือประโยชน์ที่สำคัญของ Gemini"</h3>
+                                        </div>
+                                        <p class="gfe-body gfe-mod-spacer-2-top">
+                                            <span class="gfe-headline gfe-headline--headline-6">Sam Chiswell ครูวิชาวิทยาศาสตร์ของโรงเรียน Carinya Christian School ประเทศออสเตรเลีย</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Slide 4 -->
+                            <li role="tab" id="carousel-geag-testimonials-4" class="gfe-carousel__item glue-carousel__item" aria-hidden="true" style="min-height: 423px;">
+                                <div class="gfe-component-classroom-testimonial-case-13">
+                                    <div class="gfe-copy-intro gfe-mod-text-center">
+                                        <picture class="gfe-responsive-image gfe-responsive-image--custom-size" style="display: inline-block;">
+                                            <source media="(max-width: 599px)" sizes="100vw" srcset="https://lh3.googleusercontent.com/QaKJMN-TI1c3B7WJun4n_rQg0ESPZ0tvzO9CRS_NGEtYvEnJEURfagBe2Yc5yP87Z_auh9NbzxuhUu_jSPfM4Usp6gt4bOhpNgV-d3Cz970HwGFXDzI=w640-v1-e30 1x, https://lh3.googleusercontent.com/QaKJMN-TI1c3B7WJun4n_rQg0ESPZ0tvzO9CRS_NGEtYvEnJEURfagBe2Yc5yP87Z_auh9NbzxuhUu_jSPfM4Usp6gt4bOhpNgV-d3Cz970HwGFXDzI=w960-v1-e30 2x">
+                                            <source media="(min-width: 600px) and (max-width: 1023px)" sizes="100vw" srcset="https://lh3.googleusercontent.com/QaKJMN-TI1c3B7WJun4n_rQg0ESPZ0tvzO9CRS_NGEtYvEnJEURfagBe2Yc5yP87Z_auh9NbzxuhUu_jSPfM4Usp6gt4bOhpNgV-d3Cz970HwGFXDzI=w640-v1-e30 1x, https://lh3.googleusercontent.com/QaKJMN-TI1c3B7WJun4n_rQg0ESPZ0tvzO9CRS_NGEtYvEnJEURfagBe2Yc5yP87Z_auh9NbzxuhUu_jSPfM4Usp6gt4bOhpNgV-d3Cz970HwGFXDzI=w960-v1-e30 2x">
+                                            <source media="(min-width: 1024px)" sizes="100vw" srcset="https://lh3.googleusercontent.com/QaKJMN-TI1c3B7WJun4n_rQg0ESPZ0tvzO9CRS_NGEtYvEnJEURfagBe2Yc5yP87Z_auh9NbzxuhUu_jSPfM4Usp6gt4bOhpNgV-d3Cz970HwGFXDzI=w640-v1-e30 1x, https://lh3.googleusercontent.com/QaKJMN-TI1c3B7WJun4n_rQg0ESPZ0tvzO9CRS_NGEtYvEnJEURfagBe2Yc5yP87Z_auh9NbzxuhUu_jSPfM4Usp6gt4bOhpNgV-d3Cz970HwGFXDzI=w960-v1-e30 2x">
+                                            <img loading="eager" class="gfe-responsive-image__img gfe-responsive-image__img--no-border mx-auto" src="https://lh3.googleusercontent.com/QaKJMN-TI1c3B7WJun4n_rQg0ESPZ0tvzO9CRS_NGEtYvEnJEURfagBe2Yc5yP87Z_auh9NbzxuhUu_jSPfM4Usp6gt4bOhpNgV-d3Cz970HwGFXDzI=w640-v1-e30" alt="" height="120" width="320" style="--max-width: 320px;">
+                                        </picture>
+                                        <div class="gfe-head-intro gfe-mod-spacer-4-top">
+                                            <h3 data-text="“As we regularly use Google Workspace for Education in our daily operations and classes, Gemini Education will enable seamless AI integration directly within our familiar environment. This high degree of &quot;affinity with our existing workflow&quot; was optimal for achieving our goal of an environment where AI assisting our work becomes commonplace.”" class="gfe-headline gfe-headline--headline-4 gfe-head-intro__headline">"เนื่องจากเราใช้ Google Workspace for Education เป็นประจำในการดำเนินงานและชั้นเรียนทุกวัน Gemini Education จะช่วยให้เราผสานรวม AI ได้อย่างราบรื่นโดยตรงภายในสภาพแวดล้อมที่คุ้นเคย "ความสามารถในการทำงานร่วมกับเวิร์กโฟลว์ที่มีอยู่" ในระดับสูงนี้เหมาะอย่างยิ่งสำหรับการบรรลุเป้าหมายในการสร้างสภาพแวดล้อมที่มีการใช้ AI ช่วยทำงานเป็นเรื่องปกติ"</h3>
+                                        </div>
+                                        <p class="gfe-body gfe-mod-spacer-2-top">
+                                            <span class="gfe-headline gfe-headline--headline-6">Yukiya Takeda เจ้าหน้าที่ประจำศูนย์ข้อมูลข่าวสารทั่วไปของมหาวิทยาลัย Komazawa University กรุงโตเกียว ประเทศญี่ปุ่น</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Pagination Dots -->
+                    <div class="gfe-navigation glue-carousel__navigation gfe-mod-text-center gfe-mod-spacer-3-top">
+                        <ul class="gfe-navigation__list glue-pagination-page-list gfe-no-bullet" data-glue-pagination="carousel-geag-testimonials" role="tablist">
+                            <li role="tab" onclick="switchTestimonial(0)" aria-label="Paginate to slide number 1" data-glue-pagination-page="1" id="testimonial-dot-0" class="gfe-navigation__button glue-pagination__button-container glue-pagination__page-list-button-container glue-pagination__button glue-pagination__page-list-button active" tabindex="0" aria-selected="true" aria-controls="carousel-geag-testimonials-1">1</li>
+                            <li role="tab" onclick="switchTestimonial(1)" aria-label="Paginate to slide number 2" data-glue-pagination-page="2" id="testimonial-dot-1" class="gfe-navigation__button glue-pagination__button-container glue-pagination__page-list-button-container glue-pagination__button glue-pagination__page-list-button" tabindex="-1" aria-selected="false" aria-controls="carousel-geag-testimonials-2">2</li>
+                            <li role="tab" onclick="switchTestimonial(2)" aria-label="Paginate to slide number 3" data-glue-pagination-page="3" id="testimonial-dot-2" class="gfe-navigation__button glue-pagination__button-container glue-pagination__page-list-button-container glue-pagination__button glue-pagination__page-list-button" tabindex="-1" aria-selected="false" aria-controls="carousel-geag-testimonials-3">3</li>
+                            <li role="tab" onclick="switchTestimonial(3)" aria-label="Paginate to slide number 4" data-glue-pagination-page="4" id="testimonial-dot-3" class="gfe-navigation__button glue-pagination__button-container glue-pagination__page-list-button-container glue-pagination__button glue-pagination__page-list-button" tabindex="-1" aria-selected="false" aria-controls="carousel-geag-testimonials-4">4</li>
+                        </ul>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section py-20 border-t border-gray-150">
+            <div class="faq-container">
+                <!-- Header -->
+                <div class="text-center mb-16 relative">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                        ค้นหาคำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับ <br class="hidden sm:block"/>
+                        <span class="text-google-blue font-semibold">Gemini for Education</span>
+                    </h2>
+                </div>
+
+                <!-- Expand/Collapse All Button -->
+                <div class="flex justify-end mb-6">
+                    <button id="faq-toggle-all-btn" onclick="toggleAllFaqs()" class="text-google-blue hover:text-blue-800 font-semibold text-sm flex items-center gap-1.5 transition-colors focus:outline-none">
+                        <span>ขยายทั้งหมด</span>
+                        <svg class="w-4 h-4 transition-transform duration-300" id="faq-toggle-all-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- FAQ Accordion List -->
+                <div class="flex flex-col">
+                    <!-- Item 1 -->
+                    <div class="faq-item" id="faq-item-0">
+                        <div class="faq-header" onclick="toggleFaq(0)">
+                            <h3 class="faq-question">Gemini for Education คืออะไร</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    Gemini for Education เป็นเวอร์ชันของแอป Gemini ที่สร้างขึ้นเพื่อตอบสนองความต้องการเฉพาะของชุมชนการศึกษา
+                                </p>
+                                <p class="text-gray-600 font-light leading-relaxed">
+                                    Gemini for Education สร้างขึ้นด้วย Gemini 1.5 Pro ซึ่งเป็นโมเดลชั้นนำของโลกสำหรับการเรียนรู้ที่มอบสิทธิ์เข้าถึงเริ่มต้นสำหรับโมเดล AI ระดับพรีเมียมของเรา โดยในเร็วๆ นี้จะมาพร้อมเพดานขีดจำกัดการทำงานที่สูงกว่ามากเมื่อเทียบกับสิ่งที่ผู้บริโภคได้รับโดยไม่มีค่าใช้จ่าย พร้อมด้วยการคุ้มครองข้อมูลระดับองค์กรและประสบการณ์การใช้งานที่จัดการโดยผู้ดูแลระบบในรูปแบบ<a href="https://support.google.com/a/answer/14023772" target="_blank" class="text-google-blue underline hover:text-blue-800 transition-colors">บริการหลักของ Workspace</a> ทั้งหมดนี้รวมอยู่ใน Workspace for Education รุ่นที่คุณใช้งานอยู่โดยไม่มีค่าใช้จ่าย
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="faq-item" id="faq-item-1">
+                        <div class="faq-header" onclick="toggleFaq(1)">
+                            <h3 class="faq-question">ฉันจะเข้าถึงแอป Gemini ได้อย่างไร</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    คุณสามารถเข้าถึงแอป Gemini ได้ที่ <a href="https://gemini.google.com/app" target="_blank" class="text-google-blue underline hover:text-blue-800 transition-colors">gemini.google.com</a> หรือใน <a href="https://support.google.com/gemini/answer/14554984?hl=th&co=GENIE.Platform%3DAndroid" target="_blank" class="text-google-blue underline hover:text-blue-800 transition-colors">แอป Gemini บนมือถือ</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="faq-item" id="faq-item-2">
+                        <div class="faq-header" onclick="toggleFaq(2)">
+                            <h3 class="faq-question">Gemini มีให้บริการในประเทศ ภาษา และช่วงอายุใดบ้าง</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    แอป Gemini พร้อมให้บริการแล้วในกว่า 230 ประเทศและเขตการปกครองทั่วโลก และรองรับการทำงานมากกว่า 40 ภาษา รวมถึงภาษาไทย ภาษาอังกฤษ ภาษาญี่ปุ่น และภาษาอื่นๆ
+                                </p>
+                                <p class="text-gray-600 font-light leading-relaxed">
+                                    สำหรับข้อกำหนดเรื่องอายุ ผู้ใช้งานที่จะเข้าถึง Gemini ภายใต้บัญชี Workspace for Education จะต้องมีอายุขั้นต่ำตามเกณฑ์ของ Google ในแต่ละประเทศ (โดยทั่วไปคืออายุ 18 ปีขึ้นไปสำหรับบัญชีสถาบันการศึกษา หรือตามข้อกำหนดและเครื่องมือควบคุมที่ผู้ดูแลระบบกำหนดสิทธิ์ให้สำหรับนักเรียนที่มีอายุ 13 ปีขึ้นไป)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="faq-item" id="faq-item-3">
+                        <div class="faq-header" onclick="toggleFaq(3)">
+                            <h3 class="faq-question">ฉันเห็นว่านักศึกษาระดับอุดมศึกษาได้รับสิทธิ์อัปเกรด Gemini โดยไม่มีค่าใช้จ่ายจนถึงช่วงสอบไฟนอลปี 2026 โปรโมชันนี้ยังมีอยู่ไหม</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    คุณสามารถดูข้อมูลเพิ่มเติมเกี่ยวกับข้อเสนอ Gemini สำหรับนักศึกษาในระดับอุดมศึกษาได้ที่ <a href="https://gemini.google/students/" target="_blank" class="text-google-blue underline hover:text-blue-800 transition-colors">gemini.google/students/</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="faq-item" id="faq-item-4">
+                        <div class="faq-header" onclick="toggleFaq(4)">
+                            <h3 class="faq-question">แอป Gemini และ Google Workspace พร้อม Gemini แตกต่างกันอย่างไร</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    แอป Gemini เป็นผู้ช่วย AI แบบสแตนด์อโลนที่มีฟีเจอร์ต่างๆ เช่น การสร้างข้อความ การระดมความคิด การสรุปข้อมูล การสร้างรูปภาพ และการตอบคำถามโดยใช้อินพุตหลายรูปแบบ (ข้อความ เสียง รูปภาพ)
+                                </p>
+                                <p class="text-gray-600 font-light leading-relaxed">
+                                    Google Workspace พร้อม Gemini จะผสานรวม AI เข้ากับแอปพลิเคชัน Google Workspace โดยตรง เช่น Gmail, เอกสาร, ชีต, สไลด์ และ Meet รวมถึงมอบสิทธิ์เพิ่มเติมในการเข้าถึงโมเดลและฟีเจอร์พรีเมียมในแอป Gemini และ NotebookLM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="faq-item" id="faq-item-5">
+                        <div class="faq-header" onclick="toggleFaq(5)">
+                            <h3 class="faq-question">Google AI Pro for Education คืออะไร</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    Google AI Pro for Education เป็นส่วนเสริมของ Google Workspace ที่ให้สิทธิ์เข้าถึง Google Workspace พร้อม Gemini ซึ่งเป็นโซลูชัน AI ระดับพรีเมียมเพื่อการศึกษา โดยเป็นการนำพลังของ Gemini มาผสานรวมกับสิทธิประโยชน์ด้านการทำงานร่วมกันและประสิทธิภาพการทำงานของ Workspace โดยการฝัง Generative AI ลงในเครื่องมือที่คุณใช้งานอยู่แล้วทุกวัน เช่น เอกสารและ Gmail รวมถึงให้สิทธิ์เพิ่มเติมในการเข้าถึงโมเดลและฟีเจอร์ระดับพรีเมียมในแอป Gemini และ NotebookLM ด้วย
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="faq-item" id="faq-item-6">
+                        <div class="faq-header" onclick="toggleFaq(6)">
+                            <h3 class="faq-question">ฉันต้องเป็นลูกค้า Workspace จึงจะใช้แอป Gemini ได้ใช่ไหม</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    ไม่ แอป Gemini พร้อมให้ใช้งานแบบส่วนบุคคลด้วยบัญชี Google สำหรับผู้ใช้ทั่วไป คุณสามารถเข้าถึงได้ผ่านแอป Gemini บนมือถือระบบ Android และ iOS หรือผ่านเว็บที่ <<a href="https://gemini.google.com/app" target="_blank" class="text-google-blue underline hover:text-blue-800 transition-colors">gemini.google.com</a>
+                                </p>
+                                <p class="text-gray-600 font-light leading-relaxed">
+                                    อย่างไรก็ตาม หากต้องการเข้าถึงแอป Gemini ด้วยบัญชี Google ของโรงเรียน องค์กรของคุณต้องมี Google Workspace for Education รุ่นที่มีคุณสมบัติตามเกณฑ์ และผู้ดูแลระบบต้องเปิดใช้สิทธิ์เข้าถึงแอป Gemini สำหรับบัญชีของคุณไว้ด้วย
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="faq-item" id="faq-item-7">
+                        <div class="faq-header" onclick="toggleFaq(7)">
+                            <h3 class="faq-question">แอป Gemini ใช้โมเดลภาษาใดบ้าง</h3>
+                            <button class="faq-toggle-btn" aria-label="Toggle Answer">
+                                <svg class="faq-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="mb-4 text-gray-600 font-light leading-relaxed">
+                                    เราเชื่อในการใช้โมเดลให้เหมาะกับงาน เราใช้โมเดลหลากหลายที่มีกับงานที่เฉพาะเจาะจง โดยพิจารณาจากสิ่งที่เราคิดว่าจะให้ประสบการณ์การใช้งานที่ดีที่สุด
+                                </p>
+                                <p class="text-gray-600 font-light leading-relaxed">
+                                    <a href="https://support.google.com/gemini/answer/13275745?hl=th#models" target="_blank" class="text-google-blue underline hover:text-blue-800 transition-colors">ดูข้อมูลเพิ่มเติมเกี่ยวกับโมเดลที่แอป</a> Gemini ใช้
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carousel Script -->
+        <script>
+            const geminiSlidesData = [
+                // Tab 0: ประหยัดเวลาหลายชั่วโมงในการค้นคว้าข้อมูล
+                [
+                    {
+                        title: "Deep Research",
+                        desc: "รับรายงานแบบละเอียดพร้อมการอ้างอิงเกี่ยวกับทุกหัวข้อในไม่กี่นาที และถามคำถามติดตามผลเพื่อให้ได้ข้อมูลเชิงลึกที่ถูกต้องยิ่งขึ้น",
+                        btnText: "ลองใช้ Deep Research",
+                        btnLink: "https://gemini.google.com",
+                        image: "/image/deep_research.png"
+                    }
+                ],
+                // Tab 1: สร้างผู้เชี่ยวชาญ AI แบบกำหนดเอง
+                [
+                    {
+                        title: "สร้าง Gem ส่วนตัวของคุณ",
+                        desc: "ออกแบบผู้ช่วย AI ที่มีความเชี่ยวชาญเฉพาะด้านตามที่คุณต้องการ ไม่ว่าจะเป็นผู้เชี่ยวชาญด้านการเขียนโค้ด ครูสอนภาษา หรือนักคิดสร้างสรรค์",
+                        btnText: "สร้าง Gem ของคุณ",
+                        btnLink: "https://gemini.google.com",
+                        image: "/image/custom_ai.png"
+                    }
+                ],
+                // Tab 2: เขียน สร้างโค้ด และสร้างสรรค์ผลงาน
+                [
+                    {
+                        title: "เขียนโค้ดและดีบักได้อย่างรวดเร็ว",
+                        desc: "รับความช่วยเหลือในการเขียนโค้ดในภาษาต่างๆ อธิบายการทำงานของโค้ดที่ซับซ้อน หรือช่วยหาและแก้ไขข้อผิดพลาดในโปรแกรมของคุณ",
+                        btnText: "ลองเขียนโค้ด",
+                        btnLink: "https://gemini.google.com",
+                        image: "/image/coding_writing.png"
+                    }
+                ],
+                // Tab 3: เรียนรู้ได้ทุกที่ทุกเวลา
+                [
+                    {
+                        title: "เรียนรู้ผ่านการสนทนาที่เป็นธรรมชาติ",
+                        desc: "ถามตอบสบายนอกห้องเรียน ฝึกทักษะภาษาต่างประเทศ หรือทบทวนบทเรียนเสมือนมีติวเตอร์ส่วนตัวอยู่ข้างๆ ตลอดเวลา",
+                        btnText: "คุยกับ Gemini",
+                        btnLink: "https://gemini.google.com",
+                        image: "/image/learn_anywhere.png"
+                    }
+                ]
+            ];
+
+            let activeTabIdx = 0;
+            let activeSlideIdx = 0;
+            let autoplayTimer = null;
+            let isAutoplayRunning = true;
+
+            function updateGeminiCarousel() {
+                const tabData = geminiSlidesData[activeTabIdx];
+                
+                // bounds correction
+                if (activeSlideIdx >= tabData.length) activeSlideIdx = 0;
+                if (activeSlideIdx < 0) activeSlideIdx = tabData.length - 1;
+                
+                const slide = tabData[activeSlideIdx];
+                const slideEl = document.getElementById('gemini-active-slide');
+                
+                // Transition effect: Fade out
+                slideEl.style.opacity = '0';
+                
+                setTimeout(() => {
+                    // Update content
+                    document.getElementById('gemini-slide-img').src = slide.image;
+                    document.getElementById('gemini-slide-title').innerText = slide.title;
+                    document.getElementById('gemini-slide-desc').innerText = slide.desc;
+                    document.getElementById('gemini-slide-btn').innerText = slide.btnText;
+                    document.getElementById('gemini-slide-btn').href = slide.btnLink;
+                    
+                    // Fade in
+                    slideEl.style.opacity = '1';
+                }, 150);
+                
+                // Update active tab styles
+                for (let i = 0; i < 4; i++) {
+                    const tabBtn = document.getElementById('gemini-tab-' + i);
+                    if (i === activeTabIdx) {
+                        tabBtn.classList.add('active');
+                    } else {
+                        tabBtn.classList.remove('active');
+                    }
+                }
+            }
+
+            function switchGeminiUseTab(tabIdx) {
+                activeTabIdx = tabIdx;
+                activeSlideIdx = 0;
+                updateGeminiCarousel();
+                resetAutoplay();
+            }
+
+            function nextGeminiSlide() {
+                const tabData = geminiSlidesData[activeTabIdx];
+                activeSlideIdx++;
+                if (activeSlideIdx >= tabData.length) {
+                    // Go to next tab
+                    activeTabIdx = (activeTabIdx + 1) % geminiSlidesData.length;
+                    activeSlideIdx = 0;
+                }
+                updateGeminiCarousel();
+                resetAutoplay();
+            }
+
+            function prevGeminiSlide() {
+                activeSlideIdx--;
+                if (activeSlideIdx < 0) {
+                    // Go to prev tab
+                    activeTabIdx = (activeTabIdx - 1 + geminiSlidesData.length) % geminiSlidesData.length;
+                    activeSlideIdx = geminiSlidesData[activeTabIdx].length - 1;
+                }
+                updateGeminiCarousel();
+                resetAutoplay();
+            }
+
+            function startAutoplay() {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+                autoplayTimer = setInterval(() => {
+                    nextGeminiSlide();
+                }, 6000);
+                
+                document.getElementById('autoplay-pause-icon').classList.remove('hidden');
+                document.getElementById('autoplay-play-icon').classList.add('hidden');
+                isAutoplayRunning = true;
+            }
+
+            function stopAutoplay() {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+                document.getElementById('autoplay-pause-icon').classList.add('hidden');
+                document.getElementById('autoplay-play-icon').classList.remove('hidden');
+                isAutoplayRunning = false;
+            }
+
+            function toggleGeminiAutoPlay() {
+                if (isAutoplayRunning) {
+                    stopAutoplay();
+                } else {
+                    startAutoplay();
+                }
+            }
+
+            function resetAutoplay() {
+                if (isAutoplayRunning) {
+                    startAutoplay();
+                }
+            }
+
+            // Testimonial Carousel Logic
+            let activeTestimonialIdx = 0;
+            const totalTestimonials = 4;
+            let testimonialTimer = null;
+
+            function updateTestimonialSlider() {
+                const listEl = document.getElementById('testimonial-carousel-list');
+                const prevBtn = document.getElementById('testimonial-prev-btn');
+                const nextBtn = document.getElementById('testimonial-next-btn');
+                
+                // Shift by index * 25% (since there are 4 slides, each takes 25% of the 400% list width)
+                listEl.style.transform = `translate3d(-${activeTestimonialIdx * 25}%, 0px, 0px)`;
+                
+                // Update active/hidden state on slides
+                for (let i = 0; i < totalTestimonials; i++) {
+                    const slide = document.getElementById(`carousel-geag-testimonials-${i + 1}`);
+                    const dot = document.getElementById(`testimonial-dot-${i}`);
+                    
+                    if (i === activeTestimonialIdx) {
+                        slide.classList.add('active');
+                        slide.removeAttribute('aria-hidden');
+                        slide.setAttribute('tabindex', '0');
+                        
+                        dot.classList.add('active');
+                        dot.setAttribute('aria-selected', 'true');
+                        dot.setAttribute('tabindex', '0');
+                    } else {
+                        slide.classList.remove('active');
+                        slide.setAttribute('aria-hidden', 'true');
+                        slide.setAttribute('tabindex', '-1');
+                        
+                        dot.classList.remove('active');
+                        dot.setAttribute('aria-selected', 'false');
+                        dot.setAttribute('tabindex', '-1');
+                    }
+                }
+                
+                // Update prev/next button disabled states
+                if (activeTestimonialIdx === 0) {
+                    prevBtn.setAttribute('disabled', 'true');
+                } else {
+                    prevBtn.removeAttribute('disabled');
+                }
+                
+                if (activeTestimonialIdx === totalTestimonials - 1) {
+                    nextBtn.setAttribute('disabled', 'true');
+                } else {
+                    nextBtn.removeAttribute('disabled');
+                }
+            }
+
+            function switchTestimonial(idx) {
+                activeTestimonialIdx = idx;
+                updateTestimonialSlider();
+                resetTestimonialAutoplay();
+            }
+
+            function nextTestimonial() {
+                if (activeTestimonialIdx < totalTestimonials - 1) {
+                    activeTestimonialIdx++;
+                    updateTestimonialSlider();
+                    resetTestimonialAutoplay();
+                }
+            }
+
+            function prevTestimonial() {
+                if (activeTestimonialIdx > 0) {
+                    activeTestimonialIdx--;
+                    updateTestimonialSlider();
+                    resetTestimonialAutoplay();
+                }
+            }
+
+            function startTestimonialAutoplay() {
+                if (testimonialTimer) clearInterval(testimonialTimer);
+                testimonialTimer = setInterval(() => {
+                    if (activeTestimonialIdx < totalTestimonials - 1) {
+                        nextTestimonial();
+                    } else {
+                        switchTestimonial(0); // loop back
+                    }
+                }, 8000);
+            }
+
+            function resetTestimonialAutoplay() {
+                startTestimonialAutoplay();
+            }
+
+            // FAQ Dropdown Accordion Logic
+            function toggleFaq(index) {
+                const faqItem = document.getElementById(`faq-item-${index}`);
+                if (!faqItem) return;
+                
+                const isActive = faqItem.classList.contains('active');
+                
+                if (isActive) {
+                    faqItem.classList.remove('active');
+                } else {
+                    faqItem.classList.add('active');
+                }
+                
+                updateToggleAllButtonState();
+            }
+
+            function toggleAllFaqs() {
+                const faqItems = document.querySelectorAll('.faq-item');
+                const btn = document.getElementById('faq-toggle-all-btn');
+                const icon = document.getElementById('faq-toggle-all-icon');
+                
+                let hasCollapsed = false;
+                faqItems.forEach(item => {
+                    if (!item.classList.contains('active')) {
+                        hasCollapsed = true;
+                    }
+                });
+                
+                if (hasCollapsed) {
+                    faqItems.forEach(item => item.classList.add('active'));
+                    btn.querySelector('span').innerText = 'ยุบทั้งหมด';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    faqItems.forEach(item => item.classList.remove('active'));
+                    btn.querySelector('span').innerText = 'ขยายทั้งหมด';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+
+            function updateToggleAllButtonState() {
+                const faqItems = document.querySelectorAll('.faq-item');
+                const btn = document.getElementById('faq-toggle-all-btn');
+                const icon = document.getElementById('faq-toggle-all-icon');
+                if (!btn) return;
+                
+                let allExpanded = true;
+                faqItems.forEach(item => {
+                    if (!item.classList.contains('active')) {
+                        allExpanded = false;
+                    }
+                });
+                
+                if (allExpanded) {
+                    btn.querySelector('span').innerText = 'ยุบทั้งหมด';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    btn.querySelector('span').innerText = 'ขยายทั้งหมด';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+
+            // Start on load
+            window.addEventListener('DOMContentLoaded', () => {
+                updateGeminiCarousel();
+                startAutoplay();
+                
+                // Initialize Testimonials Carousel
+                updateTestimonialSlider();
+                startTestimonialAutoplay();
+            });
+        </script>
+
+        <footer class="bg-scurve-dark-green py-12 text-gray-300 font-prompt">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-16">
+                    <div class="md:col-span-4 lg:col-span-4 flex flex-row items-center space-x-5">
+                        <img src="https://storage.googleapis.com/scurvestorageweb/logo/The_S_Curve_Logo_2026_White.png"
+                            alt="The S Curve" class="h-14 w-auto object-contain shrink-0 brightness-0 invert">
+                        <p class="text-sm italic text-gray-400 leading-relaxed max-w-[200px]">Sustaining Professional
+                            Growth through Digital Transformation.</p>
+                    </div>
+                    <div class="md:col-span-5 lg:col-span-5 flex flex-col space-y-4">
+                        <div class="text-sm leading-relaxed text-gray-400 space-y-4 pt-1">
+                            <div>
+                                <p class="font-semibold text-gray-200 mb-1">The S Curve Company Limited</p>
+                                <p class="max-w-md">6/2, Soi Muban Boonsoong (Vibhavadi Rangsit 46), Vibhavadi Rangsit
+                                    Road, Lat Yao Sub-district, Chatuchak District, Bangkok. 10900 (Head Office)</p>
+                            </div>
+                            <div class="flex flex-col space-y-1">
+                                <p>
+                                    <span class="text-gray-300">Phone:</span>
+                                    <a href="tel:084-245-5451" class="hover:text-white transition-colors">084-245-5451</a>
+                                </p>
+                                <p>
+                                    <span class="text-gray-300">E-mail:</span>
+                                    <a href="mailto:info@scurvethai.com"
+                                        class="hover:text-white transition-colors">info@scurvethai.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 lg:col-span-3 flex flex-col space-y-4">
+                        <h4 class="text-white font-semibold text-sm tracking-wider uppercase">Quick Links</h4>
+                        <div class="flex flex-col space-y-3">
+                            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white/10 pt-8 text-sm flex flex-col md:flex-row justify-between items-center">
+                    <p>© 2026 The S Curve. All rights reserved.</p>
+                    <div class="mt-4 md:mt-0">Authorized Google Workspace Partner</div>
+                </div>
+            </div>
+        </footer>
+    </main><!--$--><!--/$-->
 
 </body>
-
 
 </html>

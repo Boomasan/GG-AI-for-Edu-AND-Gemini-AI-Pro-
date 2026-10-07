@@ -7,3 +7,4 @@ dist/
 git_diff.txt
 .DS_Store
 Thumbs.db
+.vscode/
